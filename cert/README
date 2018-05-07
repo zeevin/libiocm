@@ -1,0 +1,2 @@
+转换p12格式的证书到pem格式
+openssl pkcs12 -in outgoing.CertwithKey.pkcs12 -out key.pem -nodes -clcerts
