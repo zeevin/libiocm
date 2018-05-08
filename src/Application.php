@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\ServiceContainer;
 class Application extends ServiceContainer
 {
     protected $providers = [
-        Zeevin\Libiocm\Login\ServiceProvider::class
-
+        Zeevin\Libiocm\Core\Providers\CacheProvider::class,
+        Zeevin\Libiocm\Login\ServiceProvider::class,
     ];
 
 }

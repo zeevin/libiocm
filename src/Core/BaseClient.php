@@ -79,6 +79,10 @@ Abstract class BaseClient
             $object = 'Zeevin\Libiocm\\'.$this->id.'\Response\ResponseAttribute';
             $this->result = $this->deserialize($body, $object, 'json');
         }
+        elseif ($format == 'array')
+        {
+            $this->result = json_decode($body,true);
+        }
 
         return $this->result;
     }

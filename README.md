@@ -20,3 +20,5 @@ composer require
 openssl pkcs12 -in outgoing.CertwithKey.pkcs12 -out key.pem -nodes -clcerts
 ```
 目前测试平台的证书密码是：IoM@1234，如果后期电信有更新需要同步更新。
+
+
