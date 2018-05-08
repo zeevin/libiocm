@@ -22,7 +22,7 @@ class ServiceProvider implements ServiceProviderInterface
             return new LoginClient($app);
         };
 
-        $app['sec.refresh'] = function ($app)
+        $app['sec.refreshToken'] = function ($app)
         {
             return new RefreshTokenClient($app);
         };

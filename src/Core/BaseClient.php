@@ -125,7 +125,7 @@ Abstract class BaseClient
             $tmp = explode(':',$refreshToken);
             $request = new \Zeevin\Libiocm\Sec\RequestAttribute\RefreshToken\Request();
             $request->setAppId($iotConfig['appId'])->setSecret($iotConfig['secret'])->setRefreshToken($tmp[0]);
-            $ret = $app['sec.refresh']->request($request->serialize())->getResult();
+            $ret = $app['sec.refreshToken']->request($request->serialize())->getResult();
             $app['cache']->save($cacheConfig['oauth_key'],$ret,$ret->getExpiresIn()-600);
             $app['cache']->save($cacheConfig['oauth_refresh_key'],$ret->getRefreshToken().':'.$ret->getAccessToken(),86400*28);
         }
