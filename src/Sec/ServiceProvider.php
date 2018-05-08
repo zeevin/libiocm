@@ -24,7 +24,7 @@ class ServiceProvider implements ServiceProviderInterface
 
         $app['sec.refresh'] = function ($app)
         {
-            return new RefreshClient($app);
+            return new RefreshTokenClient($app);
         };
     }
 }

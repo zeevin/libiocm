@@ -4,7 +4,7 @@
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/8
  * Time: 下午5:01
- * Source: RefreshClient.php
+ * Source: RefreshTokenClient.php
  * Project: libiocm
  */
 
@@ -14,7 +14,7 @@ namespace Zeevin\Libiocm\Sec;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
-class RefreshClient extends BaseClient implements ClientInterface
+class RefreshTokenClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'sec';
