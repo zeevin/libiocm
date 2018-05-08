@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Login\Response;
+namespace Zeevin\Libiocm\Login\ResponseAttribute\Login;
 
 
 use Zeevin\Libiocm\Core\BaseAttribute as BaseAttribute;
@@ -16,7 +16,7 @@ use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 
 
-class ResponseAttribute extends BaseAttribute
+class Response extends BaseAttribute
 {
     /**
      * @JMS\XmlElement(cdata=false)

@@ -19,7 +19,7 @@ class ServiceProvider implements ServiceProviderInterface
     {
         $app['login'] = function ($app)
         {
-            return new Client($app);
+            return new LoginClient($app);
         };
     }
 }

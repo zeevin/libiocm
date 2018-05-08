@@ -14,9 +14,6 @@ use GuzzleHttp\Client;
 
 Abstract class BaseClient
 {
-    protected $id;
-    protected $app;
-    protected $path;
     protected $method = 'POST';
     protected $httpClient;
     protected $response;
@@ -31,14 +28,14 @@ Abstract class BaseClient
     public function getUri()
     {
         $params = [];
-        $this->uri = $this->path;
+        $this->uri = $this->getPath();
 
         return $this->uri;
     }
 
     public function request($body)
     {
-        $method = strtoupper($this->method);
+        $method = strtoupper($this->getMethod());
         $this->response = $this->getHttpClient()->request(
             $method,
             $this->getUri(),
@@ -76,7 +73,7 @@ Abstract class BaseClient
             array_walk_recursive($arr, [$xml,'addChild']);
             $this->result = $xml->asXML();
         } elseif ($format == 'object') {
-            $object = 'Zeevin\Libiocm\\'.$this->id.'\Response\ResponseAttribute';
+            $object = 'Zeevin\Libiocm\\'.$this->getId().'\ResponseAttribute\\'.$this->getId().'\Response';
             $this->result = $this->deserialize($body, $object, 'json');
         }
         elseif ($format == 'array')

@@ -4,18 +4,18 @@
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午4:32
- * Source: RequestAttribute.php
+ * Source: LoginRequest.php
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Login;
+namespace Zeevin\Libiocm\Login\RequestAttribute\Login;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseAttribute;
 
 
-class RequestAttribute extends BaseAttribute
+class Request extends BaseAttribute
 {
     /**
      * 用户名，应填写应用程序ID

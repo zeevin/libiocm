@@ -11,7 +11,7 @@ composer require
 
 - 1、使用JMS包装请求参数。以定义类变量的方式设置请求参数，便于参数的设置和参数提示。
 - 2、使用JMS包装返回的json数据，默认会把请求数据映射为对应的RequestAttribute类，便于进一步使用。
-
+- 3、使用doctrine/cache 缓存ouath token结果。目前适配了memcached、Redis、file三类。
 
 注意事项：
 
