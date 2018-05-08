@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Login;
+namespace Zeevin\Libiocm\Sec;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
@@ -17,9 +17,14 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['login'] = function ($app)
+        $app['sec.login'] = function ($app)
         {
             return new LoginClient($app);
+        };
+
+        $app['sec.refresh'] = function ($app)
+        {
+            return new RefreshClient($app);
         };
     }
 }

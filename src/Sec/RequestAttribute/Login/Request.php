@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Login\RequestAttribute\Login;
+namespace Zeevin\Libiocm\Sec\RequestAttribute\Login;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
