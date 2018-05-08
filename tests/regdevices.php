@@ -14,7 +14,7 @@ $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
-$request = new \Zeevin\Libiocm\Reg\RequetsAttribute\Devices\Request();
+$request = new \Zeevin\Libiocm\Reg\RequetsAttribute\Devices\Reg\Request();
 $random = 'TEST_'.bin2hex(random_bytes(6));
 var_dump($random);
 $request->setNodeId($random);

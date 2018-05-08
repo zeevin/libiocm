@@ -18,12 +18,12 @@ class RefreshTokenClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'sec';
-    protected $id = 'refreshToken';
+    protected $prefix = 'refreshToken';
     protected $method = 'POST';
 
-    public function getId(): string
+    public function getPrefix(): string
     {
-        return $this->id;
+        return $this->prefix;
     }
 
     /**
@@ -49,11 +49,5 @@ class RefreshTokenClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
-    public function getPath()
-    {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getId();
-    }
-
 
 }

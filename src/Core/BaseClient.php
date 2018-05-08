@@ -20,6 +20,8 @@ Abstract class BaseClient
     protected $response;
     protected $result;
     protected $app;
+    protected $id = null;
+    protected $urlParams = null;
 
 
     public function __construct(ServiceContainer $app)
@@ -29,9 +31,9 @@ Abstract class BaseClient
 
     public function getUri()
     {
-        $params = [];
         $this->uri = $this->getPath();
-
+        if ($this->urlParams)
+            $this->uri = $this->uri.'?'.$this->urlParams;
         return $this->uri;
     }
 
@@ -68,7 +70,6 @@ Abstract class BaseClient
      */
     public function getResult($format = 'object')
     {
-//        print_r($this->response->getBody());exit;
         $body = (string)$this->response->getBody();
         if ($format == 'json') {
             $this->result = $body;
@@ -78,7 +79,11 @@ Abstract class BaseClient
             array_walk_recursive($arr, [$xml,'addChild']);
             $this->result = $xml->asXML();
         } elseif ($format == 'object') {
-            $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'.ucfirst($this->getId()).'\Response';
+            $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'
+                .ucfirst($this->getPrefix());
+            if($this->getId())
+                $object .= '\\'.ucfirst($this->getId());
+            $object .= '\Response';
             $this->result = $this->deserialize($body, $object, 'json');
         }
         elseif ($format == 'array')
@@ -95,7 +100,7 @@ Abstract class BaseClient
     protected function getHeaders()
     {
         $headers = ['User-Agent' => $this->client];
-        if ($this->getId()!='login')
+        if ($this->getPrefix()!='login')
         {
             $app = $this->app;
             $iotConfig = $app['config']->get('iot');
@@ -155,6 +160,15 @@ Abstract class BaseClient
         return $iotConfig['appId'];
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getPath()
+    {
+        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix();
+    }
 
     protected function deserialize($data, $object, $format)
     {

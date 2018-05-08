@@ -13,8 +13,7 @@ namespace Zeevin\Libiocm\Core\Contracts;
 
 interface ClientInterface
 {
-    public function getId();
-    public function getPath();
+    public function getPrefix();
     public function getMethod();
     public function getVersion();
     public function getDomain();

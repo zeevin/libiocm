@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Reg\RequetsAttribute\Devices;
+namespace Zeevin\Libiocm\Reg\RequetsAttribute\Devices\Reg;
 
 use Zeevin\Libiocm\Core\BaseAttribute;
 use JMS\Serializer\Annotation as JMS;

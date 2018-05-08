@@ -18,12 +18,12 @@ class LoginClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'sec';
-    protected $id = 'login';
+    protected $prefix = 'login';
     protected $method = 'POST';
 
-    public function getId()
+    public function getPrefix()
     {
-        return $this->id;
+        return $this->prefix;
     }
 
     /**
@@ -50,9 +50,5 @@ class LoginClient extends BaseClient implements ClientInterface
         return $this->method;
     }
 
-    public function getPath()
-    {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getId();
-    }
 
 }

@@ -18,14 +18,17 @@ class RegClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';
     protected $domain = 'reg';
-    protected $id = 'devices';
+    protected $prefix = 'devices';
     protected $method = 'POST';
+    protected $id = 'reg';
 
-    public function getId()
+    /**
+     * @return string
+     */
+    public function getPrefix(): string
     {
-        return $this->id;
+        return $this->prefix;
     }
-
     /**
      * @return string
      */
@@ -52,7 +55,6 @@ class RegClient extends BaseClient implements ClientInterface
 
     public function getPath()
     {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getId().'?appId='.$this->getAppId();
+        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix().'?appId='.$this->getAppId();
     }
-
 }
