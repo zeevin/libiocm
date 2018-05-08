@@ -13,7 +13,7 @@ namespace Zeevin\Libiocm\Core;
 
 abstract class BaseAttribute
 {
-    public function serialize($format = 'form-url-encode')
+    public function serialize($format = 'json')
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
 

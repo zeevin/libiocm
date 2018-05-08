@@ -16,6 +16,6 @@ interface ClientInterface
     public function getId();
     public function getPath();
     public function getMethod();
-
-
+    public function getVersion();
+    public function getDomain();
 }
