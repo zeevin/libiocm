@@ -88,11 +88,6 @@ Abstract class BaseClient
         return $this->result;
     }
 
-    public function getId()
-    {
-        return $this->id;
-    }
-
     /**
      * @return array
      */
