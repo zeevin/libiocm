@@ -4,7 +4,7 @@
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午8:42
- * Source: ResponseAttribute.php
+ * Source: Response.php
  * Project: libiocm
  */
 

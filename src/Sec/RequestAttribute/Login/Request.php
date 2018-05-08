@@ -4,7 +4,7 @@
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午4:32
- * Source: LoginRequest.php
+ * Source: Request.php
  * Project: libiocm
  */
 
