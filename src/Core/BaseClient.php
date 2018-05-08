@@ -19,6 +19,7 @@ Abstract class BaseClient
     protected $httpClient;
     protected $response;
     protected $result;
+    protected $app;
 
 
     public function __construct(ServiceContainer $app)
@@ -77,7 +78,7 @@ Abstract class BaseClient
             array_walk_recursive($arr, [$xml,'addChild']);
             $this->result = $xml->asXML();
         } elseif ($format == 'object') {
-            $object = 'Zeevin\Libiocm\\'.$this->getDomain().'\ResponseAttribute\\'.ucfirst($this->getId()).'\Response';
+            $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'.ucfirst($this->getId()).'\Response';
             $this->result = $this->deserialize($body, $object, 'json');
         }
         elseif ($format == 'array')
@@ -141,6 +142,17 @@ Abstract class BaseClient
         }
 
         return $ret->getAccessToken();
+    }
+
+    /**
+     * 获取appId
+     * @return mixed
+     */
+    protected function getAppId()
+    {
+        $app = $this->app;
+        $iotConfig = $app['config']->get('iot');
+        return $iotConfig['appId'];
     }
 
 

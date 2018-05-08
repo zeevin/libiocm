@@ -14,7 +14,6 @@ use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseAttribute;
 
-
 class Request extends BaseAttribute
 {
     /**

@@ -1,0 +1,128 @@
+<?php
+/**
+ * @link   http://www.init.lu
+ * @author Cao Kang(caokang@outlook.com)
+ * Date: 2018/5/8
+ * Time: 下午8:32
+ * Source: Response.php
+ * Project: libiocm
+ */
+
+namespace Zeevin\Libiocm\Reg\ResponseAttribute\Devices;
+
+
+use JMS\Serializer\Annotation as JMS;
+use JMS\Serializer\Annotation\SerializedName;
+use Zeevin\Libiocm\Core\BaseAttribute;
+
+class Response extends BaseAttribute
+{
+    /**
+     * 单位秒，不填使用默认值(180s), 填写0则永不过期，非0表示在指定时间内设备进行绑定，超过时间验证码无效
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("deviceId")
+     * @JMS\Type("string")
+     */
+    protected $deviceId;
+    /**
+     * 申请的临时验证码，设备可以通过验证码获取id和密码
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("verifyCode")
+     * @JMS\Type("string")
+     */
+    protected $verifyCode;
+    /**
+     * 验证码有效时间，单位秒，设备需要在有效时间内接入平台
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("timeout")
+     * @JMS\Type("integer")
+     */
+    protected $timeout = 10;
+
+    /**
+     * psk码，用于生成设备鉴权参数
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("psk")
+     * @JMS\Type("string")
+     */
+    protected $psk;
+
+    /**
+     * @return mixed
+     */
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
+
+    /**
+     * @param $deviceId
+     *
+     * @return $this
+     */
+    public function setDeviceId($deviceId)
+    {
+        $this->deviceId = $deviceId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVerifyCode()
+    {
+        return $this->verifyCode;
+    }
+
+    /**
+     * @param $verifyCode
+     *
+     * @return $this
+     */
+    public function setVerifyCode($verifyCode)
+    {
+        $this->verifyCode = $verifyCode;
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimeout(): int
+    {
+        return $this->timeout;
+    }
+
+    /**
+     * @param int $timeout
+     *
+     * @return $this
+     */
+    public function setTimeout(int $timeout)
+    {
+        $this->timeout = $timeout;
+        return $this;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getPsk()
+    {
+        return $this->psk;
+    }
+
+    /**
+     * @param $psk
+     *
+     * @return $this
+     */
+    public function setPsk($psk)
+    {
+        $this->psk = $psk;
+        return $this;
+    }
+
+
+}
