@@ -11,6 +11,7 @@
 namespace Zeevin\Libiocm\Core;
 
 use GuzzleHttp\Client;
+use LSS\Array2XML;
 
 Abstract class BaseClient
 {
@@ -21,6 +22,7 @@ Abstract class BaseClient
     protected $result;
     protected $app;
     protected $id = null;
+    protected $urlExtend = null;
     protected $urlParams = null;
 
 
@@ -40,7 +42,6 @@ Abstract class BaseClient
     public function request($body)
     {
         $method = strtoupper($this->getMethod());
-//        print_r($this->getHeaders());exit;
         $this->response = $this->getHttpClient()->request(
             $method,
             $this->getUri(),
@@ -73,12 +74,12 @@ Abstract class BaseClient
         $body = (string)$this->response->getBody();
         if ($format == 'json') {
             $this->result = $body;
-        } elseif ($format == 'xml') {
-            $arr = json_decode($body,true);
-            $xml = new \SimpleXMLElement('<root/>');
-            array_walk_recursive($arr, [$xml,'addChild']);
-            $this->result = $xml->asXML();
-        } elseif ($format == 'object') {
+        }
+        elseif ($format == 'array')
+        {
+            $this->result = json_decode($body,true);
+        }
+        elseif ($format == 'object') {
             $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'
                 .ucfirst($this->getPrefix());
             if($this->getId())
@@ -86,11 +87,11 @@ Abstract class BaseClient
             $object .= '\Response';
             $this->result = $this->deserialize($body, $object, 'json');
         }
-        elseif ($format == 'array')
-        {
-            $this->result = json_decode($body,true);
+        elseif ($format == 'xml') {
+            $arr = json_decode($body,true);
+            $xml = Array2XML::createXML('root',$arr);
+            $this->result = $xml->saveXML();
         }
-
         return $this->result;
     }
 
@@ -167,8 +168,34 @@ Abstract class BaseClient
 
     public function getPath()
     {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix();
+        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix().$this->getUrlExtend();
     }
+
+    /**
+     * @param mixed ...$params
+     *
+     * @return $this
+     */
+    public function setUrlExtend(...$params)
+    {
+        $extend = '';
+        foreach ($params as $item)
+        {
+            $extend .= '/'.$item;
+        }
+
+        $this->urlExtend = $extend;
+        return $this;
+    }
+
+    /**
+     * @return null
+     */
+    public function getUrlExtend()
+    {
+        return $this->urlExtend;
+    }
+
 
     protected function deserialize($data, $object, $format)
     {
