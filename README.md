@@ -21,4 +21,6 @@ openssl pkcs12 -in outgoing.CertwithKey.pkcs12 -out key.pem -nodes -clcerts
 ```
 目前测试平台的证书密码是：IoM@1234，如果后期电信有更新需要同步更新。
 
-
+- 2、电信编写的api文档看起来并不十分完善，有些返回信息是从头信息中查看，比如1.2.2.4 删除直连设备接口，
+此接口在删除成功时返回结果需要查看头信息的statusCode和reasonPhrase内容，body中并没有json信息，为解决这种问题，
+我在所有的请求结果中都加入了"statusCode"和"reasonPhrase"属性。
