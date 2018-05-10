@@ -1,6 +1,9 @@
 中国电信物联网开放平台API（北向）对接库
 =======================
 
+[![GitHub license](https://img.shields.io/github/license/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/blob/master/LICENSE)
+
+
 Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 
 安装：
