@@ -36,7 +36,7 @@ class Request extends BaseAttribute
      * 可选
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("verifyCode")
-     * @JMS\Type("string")
+     * @JMS\Type("string")、
      */
     protected $verifyCode;
     /**

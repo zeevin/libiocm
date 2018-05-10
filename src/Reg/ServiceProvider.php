@@ -18,9 +18,13 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['reg.device'] = function ($app)
+        $app['reg.reg'] = function ($app)
         {
             return new RegClient($app);
+        };
+        $app['reg.checkActivatedStat'] = function ($app)
+        {
+            return new CheckActivatedStatClient($app);
         };
     }
 }
