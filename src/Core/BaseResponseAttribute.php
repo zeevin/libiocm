@@ -34,6 +34,7 @@ abstract class BaseResponseAttribute
      * body错误码
      * 可选
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("errorCode")
      * @JMS\Type("string")
      */
     protected $errorCode;
@@ -41,6 +42,7 @@ abstract class BaseResponseAttribute
      * body错误描述
      * 可选
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("errorDesc")
      * @JMS\Type("string")
      */
     protected $errorDesc;
