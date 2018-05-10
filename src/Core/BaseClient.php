@@ -71,8 +71,12 @@ Abstract class BaseClient
      */
     public function getResult($format = 'object')
     {
-        $body = (string)$this->response->getBody();
-        if ($format == 'json') {
+        $body_array = json_decode((string)$this->response->getBody(),true);
+        $body_array['statusCode'] = $this->response->getStatusCode();
+        $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
+        $body = json_encode($body_array);
+
+        if ($format == 'json' || $format == 'text') {
             $this->result = $body;
         }
         elseif ($format == 'array')
