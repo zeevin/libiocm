@@ -3,7 +3,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/blob/master/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/network)
-
+[![GitHub stars](https://img.shields.io/github/stars/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/stargazers)
 
 Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 
@@ -11,6 +11,7 @@ Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 ```bash
 composer require zeevin/libiocm 
 ```
+
 主要完成如下内容：
 
 - 1、使用JMS包装请求参数。以定义类变量的方式设置请求参数，便于参数的设置和参数提示。
@@ -18,7 +19,6 @@ composer require zeevin/libiocm
 - 3、使用doctrine/cache 缓存ouath token结果。目前适配了memcached、Redis、file三类。
 
 注意事项：
-
 - 1、Guzzle 库只支持pem格式的证书，因此需要将默认的p12格式证书转换成pem格式，比如：
 ```bash
 openssl pkcs12 -in outgoing.CertwithKey.pkcs12 -out key.pem -nodes -clcerts

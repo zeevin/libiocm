@@ -21,7 +21,7 @@ return [
     'cache' =>
         [
             //http://doctrine-orm.readthedocs.io/projects/doctrine-orm/en/latest/reference/caching.html
-            'default'  => 'redis',
+            'default'  => 'file',
             'oauth_key' => 'oauth_return',
             'oauth_refresh_key' => 'oauth_refresh',
             'stores' => [
