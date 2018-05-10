@@ -2,6 +2,7 @@
 =======================
 
 [![GitHub license](https://img.shields.io/github/license/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/blob/master/LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/network)
 
 
 Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
