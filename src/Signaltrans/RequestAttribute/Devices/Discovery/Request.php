@@ -11,11 +11,11 @@
 namespace Zeevin\Libiocm\Signaltrans\RequestAttribute\Devices\Discovery;
 
 
-use Zeevin\Libiocm\Core\BaseAttribute;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
+use Zeevin\Libiocm\Core\BaseRequestAttribute;
 
-class Request extends BaseAttribute
+class Request extends BaseRequestAttribute
 {
 
 }

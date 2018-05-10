@@ -16,7 +16,6 @@ use LSS\Array2XML;
 Abstract class BaseClient
 {
     protected $client = 'liboocm';
-    protected $method = 'POST';
     protected $httpClient;
     protected $response;
     protected $result;
@@ -72,6 +71,16 @@ Abstract class BaseClient
     public function getResult($format = 'object')
     {
         $body_array = json_decode((string)$this->response->getBody(),true);
+        if(isset($body_array['error_desc']))
+        {
+            $body_array['errorDesc'] = $body_array['error_desc'];
+            unset($body_array['error_desc']);
+        }
+        if(isset($body_array['error_code']))
+        {
+            $body_array['errorCode'] = $body_array['error_code'];
+            unset($body_array['error_code']);
+        }
         $body_array['statusCode'] = $this->response->getStatusCode();
         $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
         $body = json_encode($body_array);

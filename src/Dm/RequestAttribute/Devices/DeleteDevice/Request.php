@@ -3,12 +3,12 @@
  * @link   http://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
- * Time: 上午10:35
+ * Time: 下午4:06
  * Source: Request.php
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Reg\RequetAttribute\Devices\CheckActivatedStat;
+namespace Zeevin\Libiocm\Dm\RequestAttribute\Devices\DeleteDevice;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
@@ -26,6 +26,15 @@ class Request extends BaseRequestAttribute
     protected $appId;
 
     /**
+     * 仅在设备是网关，且连接了传感器时有效。取值null或者true删除网关及其下属设备；取值false时删除网关，并将下属传感器属性变为网关属性
+     * 可选
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("appId")
+     * @JMS\Type("string")
+     */
+    protected $cascade;
+
+    /**
      * @return mixed
      */
     public function getAppId()
@@ -41,6 +50,25 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCascade()
+    {
+        return $this->cascade;
+    }
+
+    /**
+     * @param $cascade
+     *
+     * @return $this
+     */
+    public function setCascade($cascade)
+    {
+        $this->cascade = $cascade;
         return $this;
     }
 

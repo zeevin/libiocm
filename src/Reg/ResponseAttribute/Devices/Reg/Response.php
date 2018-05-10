@@ -10,12 +10,11 @@
 
 namespace Zeevin\Libiocm\Reg\ResponseAttribute\Devices\Reg;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
-use Zeevin\Libiocm\Core\BaseAttribute;
+use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
-class Response extends BaseAttribute
+class Response extends BaseResponseAttribute
 {
     /**
      * 单位秒，不填使用默认值(180s), 填写0则永不过期，非0表示在指定时间内设备进行绑定，超过时间验证码无效

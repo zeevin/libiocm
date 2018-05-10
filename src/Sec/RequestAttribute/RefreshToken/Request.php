@@ -12,9 +12,9 @@ namespace Zeevin\Libiocm\Sec\RequestAttribute\RefreshToken;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
-use Zeevin\Libiocm\Core\BaseAttribute;
+use Zeevin\Libiocm\Core\BaseRequestAttribute;
 
-class Request extends BaseAttribute
+class Request extends BaseRequestAttribute
 {
     /**
      * 用户名，应填写应用程序ID

@@ -13,7 +13,7 @@ namespace Zeevin\Libiocm\Core;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 
-abstract class BaseAttribute
+abstract class BaseResponseAttribute
 {
     /**
      * 响应头信息statusCode
@@ -29,6 +29,22 @@ abstract class BaseAttribute
      * @JMS\Type("string")
      */
     protected $reasonPhrase;
+
+    /**
+     * body错误码
+     * 可选
+     * @JMS\XmlElement(cdata=false)
+     * @JMS\Type("string")
+     */
+    protected $errorCode;
+    /**
+     * body错误描述
+     * 可选
+     * @JMS\XmlElement(cdata=false)
+     * @JMS\Type("string")
+     */
+    protected $errorDesc;
+
 
     /**
      * @return mixed
@@ -60,6 +76,38 @@ abstract class BaseAttribute
     public function setReasonPhrase($reasonPhrase)
     {
         $this->reasonPhrase = $reasonPhrase;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getErrorCode()
+    {
+        return $this->errorCode;
+    }
+
+    /**
+     * @param mixed $errorCode
+     */
+    public function setErrorCode($errorCode)
+    {
+        $this->errorCode = $errorCode;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getErrorDesc()
+    {
+        return $this->errorDesc;
+    }
+
+    /**
+     * @param mixed $errorDesc
+     */
+    public function setErrorDesc($errorDesc)
+    {
+        $this->errorDesc = $errorDesc;
     }
 
 

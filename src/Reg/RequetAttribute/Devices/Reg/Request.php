@@ -10,16 +10,16 @@
 
 namespace Zeevin\Libiocm\Reg\RequetAttribute\Devices\Reg;
 
-use Zeevin\Libiocm\Core\BaseAttribute;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
+use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
 /**
  * Class Request
  *
  * @package Zeevin\Libiocm\DeviceManager\RequetsAttribute\Reg
  */
-class Request extends BaseAttribute
+class Request extends BaseResponseAttribute
 {
     /**
      * 用户名，应填写应用程序ID

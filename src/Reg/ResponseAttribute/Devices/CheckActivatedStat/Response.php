@@ -10,17 +10,16 @@
 
 namespace Zeevin\Libiocm\Reg\ResponseAttribute\Devices\CheckActivatedStat;
 
-
-use Zeevin\Libiocm\Core\BaseAttribute;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
+use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
 /**
  * Class Response
  *
  * @package Zeevin\Libiocm\Reg\ResponseAttribute\Devices\CheckActivatedStat
  */
-class Response extends BaseAttribute
+class Response extends BaseResponseAttribute
 {
     /**
      * 设备唯一标识，1-64个字节
