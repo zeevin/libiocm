@@ -22,6 +22,11 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new DeleteDeviceClient($app);
         };
+        $app['dm.updateDevice'] = function ($app)
+        {
+            return new UpdateDeviceClient($app);
+        };
+
     }
 
 }
