@@ -12,6 +12,7 @@
             "homepage": "https://www.init.lu"
         }
     ],
+  "minimum-stability": "dev",
     "require": {
         "php": ">=7.0",
         "guzzlehttp/guzzle": "~6.0",
