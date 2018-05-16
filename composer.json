@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/zeevin/libiocm",
-    "version": "v0.3.0-beta",
+    "keywords": ["iocm", "中国电信北向API", "OceanConnect", "nb-iot", "nbiot"],
     "authors": [
         {
             "name": "CaoKang",
@@ -27,5 +27,10 @@
       "psr-4": {
         "Zeevin\\Libiocm\\": "src/"
       }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
