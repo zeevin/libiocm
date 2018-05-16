@@ -19,7 +19,7 @@ Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 
 安装：
 ```bash
-composer require zeevin/libiocm 
+composer require  zeevin/libiocm "@dev"
 ```
 
 主要完成如下内容：
