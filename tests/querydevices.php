@@ -19,5 +19,7 @@ $request->setAppId($iotConfig['appId'])->setPageNo(1);
 /** @var \Zeevin\Libiocm\Dm\QueryDevicesClient $app_queryDevices] */
 $app_queryDevices = $app['dm.queryDevices'];
 //print_r($request->serialize('form-url-encode'));exit;
+/** @var \Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Response $ret */
 $ret =  $app_queryDevices->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
+//print_r($ret->getDevices()[0]->getDeviceInfo());

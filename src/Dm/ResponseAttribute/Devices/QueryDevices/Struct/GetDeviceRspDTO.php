@@ -46,6 +46,7 @@ class GetDeviceRspDTO
      */
     protected $lastModifiedTime;
     /**
+     * @var \Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\DeviceInfo
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceInfo")
      * @JMS\Type("Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\DeviceInfo")
@@ -58,9 +59,10 @@ class GetDeviceRspDTO
      */
     protected $services;
     /**
+     * @var ConnectionInfo
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("connectionInfo")
-     * @JMS\Type("array")
+     * @JMS\Type("Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\ConnectionInfo")
      */
     protected $connectionInfo;
     /**
@@ -117,7 +119,7 @@ class GetDeviceRspDTO
     }
 
     /**
-     * @return mixed
+     * @return DeviceInfo
      */
     public function getDeviceInfo()
     {
@@ -133,7 +135,7 @@ class GetDeviceRspDTO
     }
 
     /**
-     * @return mixed
+     * @return ConnectionInfo
      */
     public function getConnectionInfo()
     {
