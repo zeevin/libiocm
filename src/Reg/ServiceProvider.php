@@ -22,9 +22,15 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new RegClient($app);
         };
+
         $app['reg.checkActivatedStat'] = function ($app)
         {
             return new CheckActivatedStatClient($app);
+        };
+
+        $app['reg.refreshKey'] = function ($app)
+        {
+            return new RefreshKeyClient($app);
         };
     }
 }
