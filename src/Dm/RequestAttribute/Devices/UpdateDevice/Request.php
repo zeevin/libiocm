@@ -29,6 +29,7 @@ class Request extends BaseRequestAttribute
     /**
      * @var UpdateDeviceInfoReqDTO
      * @SerializedName("request")
+     * @JMS\Inline
      * @JMS\Type("Zeevin\Libiocm\Dm\RequestAttribute\Devices\UpdateDevice\Struct\UpdateDeviceInfoReqDTO")
      */
     protected $request;
