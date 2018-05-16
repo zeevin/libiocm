@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/zeevin/libiocm",
+    "version": "v0.3.0-beta",
     "authors": [
         {
             "name": "CaoKang",
