@@ -16,7 +16,6 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
 /**
  * Class Response
- *
  * @package Zeevin\Libiocm\Reg\ResponseAttribute\Devices\CheckActivatedStat
  */
 class Response extends BaseResponseAttribute
@@ -54,27 +53,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param mixed $deviceId
-     */
-    public function setDeviceId($deviceId)
-    {
-        $this->deviceId = $deviceId;
-    }
-
-    /**
      * @return mixed
      */
     public function getActivated()
     {
         return $this->activated;
-    }
-
-    /**
-     * @param mixed $activated
-     */
-    public function setActivated($activated)
-    {
-        $this->activated = $activated;
     }
 
     /**
@@ -84,15 +67,6 @@ class Response extends BaseResponseAttribute
     {
         return $this->name;
     }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
 
 
 }

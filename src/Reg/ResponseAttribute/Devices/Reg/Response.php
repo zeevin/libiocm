@@ -55,33 +55,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param $deviceId
-     *
-     * @return $this
-     */
-    public function setDeviceId($deviceId)
-    {
-        $this->deviceId = $deviceId;
-        return $this;
-    }
-
-    /**
      * @return mixed
      */
     public function getVerifyCode()
     {
         return $this->verifyCode;
-    }
-
-    /**
-     * @param $verifyCode
-     *
-     * @return $this
-     */
-    public function setVerifyCode($verifyCode)
-    {
-        $this->verifyCode = $verifyCode;
-        return $this;
     }
 
     /**
@@ -93,35 +71,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param int $timeout
-     *
-     * @return $this
-     */
-    public function setTimeout(int $timeout)
-    {
-        $this->timeout = $timeout;
-        return $this;
-    }
-
-
-    /**
      * @return mixed
      */
     public function getPsk()
     {
         return $this->psk;
     }
-
-    /**
-     * @param $psk
-     *
-     * @return $this
-     */
-    public function setPsk($psk)
-    {
-        $this->psk = $psk;
-        return $this;
-    }
-
 
 }

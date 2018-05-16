@@ -42,27 +42,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param mixed $verifyCode
-     */
-    public function setVerifyCode($verifyCode)
-    {
-        $this->verifyCode = $verifyCode;
-    }
-
-    /**
      * @return int
      */
     public function getTimeout(): int
     {
         return $this->timeout;
-    }
-
-    /**
-     * @param int $timeout
-     */
-    public function setTimeout(int $timeout)
-    {
-        $this->timeout = $timeout;
     }
 
 

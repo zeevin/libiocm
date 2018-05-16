@@ -57,27 +57,11 @@ abstract class BaseResponseAttribute
     }
 
     /**
-     * @param mixed $statusCode
-     */
-    public function setStatusCode($statusCode)
-    {
-        $this->statusCode = $statusCode;
-    }
-
-    /**
      * @return mixed
      */
     public function getReasonPhrase()
     {
         return $this->reasonPhrase;
-    }
-
-    /**
-     * @param mixed $reasonPhrase
-     */
-    public function setReasonPhrase($reasonPhrase)
-    {
-        $this->reasonPhrase = $reasonPhrase;
     }
 
     /**
@@ -89,29 +73,12 @@ abstract class BaseResponseAttribute
     }
 
     /**
-     * @param mixed $errorCode
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->errorCode = $errorCode;
-    }
-
-    /**
      * @return mixed
      */
     public function getErrorDesc()
     {
         return $this->errorDesc;
     }
-
-    /**
-     * @param mixed $errorDesc
-     */
-    public function setErrorDesc($errorDesc)
-    {
-        $this->errorDesc = $errorDesc;
-    }
-
 
 
     public function serialize($format = 'json')

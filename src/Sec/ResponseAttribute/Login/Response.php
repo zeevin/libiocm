@@ -56,27 +56,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param mixed $scope
-     */
-    public function setScope($scope)
-    {
-        $this->scope = $scope;
-    }
-
-    /**
      * @return mixed
      */
     public function getTokenType()
     {
         return $this->tokenType;
-    }
-
-    /**
-     * @param mixed $tokenType
-     */
-    public function setTokenType($tokenType)
-    {
-        $this->tokenType = $tokenType;
     }
 
     /**
@@ -88,27 +72,11 @@ class Response extends BaseResponseAttribute
     }
 
     /**
-     * @param mixed $expiresIn
-     */
-    public function setExpiresIn($expiresIn)
-    {
-        $this->expiresIn = $expiresIn;
-    }
-
-    /**
      * @return mixed
      */
     public function getAccessToken()
     {
         return $this->accessToken;
-    }
-
-    /**
-     * @param mixed $accessToken
-     */
-    public function setAccessToken($accessToken)
-    {
-        $this->accessToken = $accessToken;
     }
 
     /**
@@ -119,12 +87,5 @@ class Response extends BaseResponseAttribute
         return $this->refreshToken;
     }
 
-    /**
-     * @param mixed $refreshToken
-     */
-    public function setRefreshToken($refreshToken)
-    {
-        $this->refreshToken = $refreshToken;
-    }
 
 }
