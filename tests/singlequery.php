@@ -23,5 +23,5 @@ $device_id = '2f41a999-3031-41bf-8aeb-a4d27eb9b547';
 /** @var \Zeevin\Libiocm\Dm\RequestAttribute\Devices\SingleQuery\Request $ret */
 $ret = $single->setUrlExtend($device_id)->setUrlParams(
     $request->serialize('form-url-encode')
-)->request()->getResult('json');
+)->request()->getResult();
 print_r($ret);

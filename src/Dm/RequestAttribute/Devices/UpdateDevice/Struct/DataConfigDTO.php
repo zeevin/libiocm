@@ -20,14 +20,14 @@ class DataConfigDTO
      * 可选
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("dataAgingTime")
-     * @JMS\Type("integer")
+     * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $dataAgingTime;
 
     /**
      * @return mixed
      */
-    public function getDataAgingTime(): int
+    public function getDataAgingTime()
     {
         return $this->dataAgingTime;
     }
@@ -35,9 +35,11 @@ class DataConfigDTO
     /**
      * @param mixed $dataAgingTime
      */
-    public function setDataAgingTime(int $dataAgingTime)
+    public function setDataAgingTime($dataAgingTime)
     {
         $this->dataAgingTime = $dataAgingTime;
     }
+
+
 
 }

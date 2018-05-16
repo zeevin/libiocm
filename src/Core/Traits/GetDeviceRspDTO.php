@@ -36,13 +36,13 @@ trait GetDeviceRspDTO
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("createTime")
-     * @JMS\Type("string")
+     * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $createTime;
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("lastModifiedTime")
-     * @JMS\Type("string")
+     * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $lastModifiedTime;
     /**
@@ -74,7 +74,7 @@ trait GetDeviceRspDTO
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("devGroupIds")
-     * @JMS\Type("array")
+     * @JMS\Type("array<string>")
      */
     protected $devGroupIds;
 
