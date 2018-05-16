@@ -30,6 +30,10 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new QueryDevicesClient($app);
         };
+        $app['dm.singleQuery'] = function ($app)
+        {
+            return new SingleQueryClient($app);
+        };
 
     }
 
