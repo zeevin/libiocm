@@ -101,7 +101,6 @@ class UpdateDeviceInfoReqDTO
      * @var DeviceConfigDTO
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceConfig")
-     * @JMS\Inline
      * @JMS\Type("Zeevin\Libiocm\Dm\RequestAttribute\Devices\UpdateDevice\Struct\DeviceConfigDTO")
      */
     protected $deviceConfig;
