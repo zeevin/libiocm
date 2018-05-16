@@ -22,6 +22,6 @@ $request->getRequest()->getDeviceConfig()->getDataConfig()->setDataAgingTime(90)
 /** @var \Zeevin\Libiocm\Dm\UpdateDeviceClient $app_update */
 $app_update = $app['dm.updateDevice'];
 $device_id = '11528384-61d0-4822-8a68-0e262ae9f1b2';
-print_r($request->serialize());exit;
+//print_r($request->serialize());exit;
 $ret =  $app_update->setUrlExtend($device_id)->request($request->serialize())->getResult('json');
 print_r($ret);

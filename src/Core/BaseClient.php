@@ -22,6 +22,11 @@ Abstract class BaseClient
     protected $app;
     protected $id = null;
     protected $urlExtend = null;
+    /**
+     * 为了适配有些接口GET参数必须从url中代入，而不能从body中传入的问题，如1.2.3.1 按条件批量查询设备，此接口所有的参数
+     * 必须要求拼接到url中，真是个蛋疼的接口
+     * @var null
+     */
     protected $urlParams = null;
 
 
@@ -38,7 +43,13 @@ Abstract class BaseClient
         return $this->uri;
     }
 
-    public function request($body)
+    /**
+     * @param string $body
+     *
+     * @return $this
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function request($body='')
     {
         $method = strtoupper($this->getMethod());
         $this->response = $this->getHttpClient()->request(
@@ -207,6 +218,25 @@ Abstract class BaseClient
     public function getUrlExtend()
     {
         return $this->urlExtend;
+    }
+
+    /**
+     * @return null
+     */
+    public function getUrlParams()
+    {
+        return $this->urlParams;
+    }
+
+    /**
+     * @param $urlParams
+     *
+     * @return $this
+     */
+    public function setUrlParams($urlParams)
+    {
+        $this->urlParams = $urlParams;
+        return $this;
     }
 
 

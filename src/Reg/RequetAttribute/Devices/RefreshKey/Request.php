@@ -85,11 +85,14 @@ class Request extends BaseRequestAttribute
     }
 
     /**
-     * @param mixed $deviceId
+     * @param $deviceId
+     *
+     * @return $this
      */
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+        return $this;
     }
 
     /**
@@ -101,11 +104,14 @@ class Request extends BaseRequestAttribute
     }
 
     /**
-     * @param mixed $verifyCode
+     * @param $verifyCode
+     *
+     * @return $this
      */
     public function setVerifyCode($verifyCode)
     {
         $this->verifyCode = $verifyCode;
+        return $this;
     }
 
     /**
@@ -117,11 +123,14 @@ class Request extends BaseRequestAttribute
     }
 
     /**
-     * @param mixed $nodeId
+     * @param $nodeId
+     *
+     * @return $this
      */
     public function setNodeId($nodeId)
     {
         $this->nodeId = $nodeId;
+        return $this;
     }
 
     /**
@@ -134,10 +143,13 @@ class Request extends BaseRequestAttribute
 
     /**
      * @param int $timeout
+     *
+     * @return $this
      */
     public function setTimeout(int $timeout)
     {
         $this->timeout = $timeout;
+        return $this;
     }
 
 
