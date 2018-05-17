@@ -25,7 +25,14 @@ $app1 = $app['cmd.create'];
 //print_r($request->serialize());exit;
 
 //此接口有几个异常的代码的请求状态码是404和500，需要单独try catch此类异常，按说只要不是对方服务器执行出问题，都应该用200的状态码返回数据
-$ret =  $app1->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request->serialize())->getResult('json');
-print_r($ret);
+try
+{
+    $ret =  $app1->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request->serialize())->getResult('json');
+    print_r($ret);
+}catch (Exception $e)
+{
+    echo json_encode(['errorcode'=>$e->getCode(),'errormessage'=>$e->getMessage()]);
+}
+
 
 
