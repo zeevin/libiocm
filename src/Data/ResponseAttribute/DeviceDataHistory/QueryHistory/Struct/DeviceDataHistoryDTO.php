@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Struct\DeviceDataHistoryDTO;
+namespace Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Struct;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;

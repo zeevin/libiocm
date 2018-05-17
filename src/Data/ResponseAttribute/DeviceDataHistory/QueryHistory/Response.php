@@ -39,10 +39,10 @@ class Response extends BaseResponseAttribute
     protected $pageNo;
     /**
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("list")
+     * @SerializedName("deviceDataHistoryDTOs")
      * @JMS\Type("array<Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Struct\DeviceDataHistoryDTO>")
      */
-    protected $list;
+    protected $deviceDataHistoryDTOs;
 
     /**
      * @return mixed

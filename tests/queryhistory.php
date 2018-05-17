@@ -4,7 +4,7 @@
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午6:21
- * Source: devicedatahistory.php
+ * Source: queryhistory.php
  * Project: libiocm
  */
 
@@ -21,5 +21,5 @@ $request->setAppId($iotConfig['appId'])->setDeviceId('2f41a999-3031-41bf-8aeb-a4
 $app1 = $app['data.deviceDataHistory'];
 
 /** @var \Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Response $ret */
-$ret =  $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult('json');
+$ret =  $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
