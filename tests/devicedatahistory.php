@@ -17,7 +17,7 @@ $cacheConfig = $app['config']->get('cache');
 $request = new Zeevin\Libiocm\Data\RequestAttribute\DeviceDataHistory\QueryHistory\Request();
 $request->setAppId($iotConfig['appId'])->setDeviceId('2f41a999-3031-41bf-8aeb-a4d27eb9b547')
 ->setGatewayId('2f41a999-3031-41bf-8aeb-a4d27eb9b547');
-/** @var \Zeevin\Libiocm\Data\DeviceDataHistoryClient $app1] */
+/** @var \Zeevin\Libiocm\Data\QueryHistoryClient $app1] */
 $app1 = $app['data.deviceDataHistory'];
 
 /** @var \Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Response $ret */

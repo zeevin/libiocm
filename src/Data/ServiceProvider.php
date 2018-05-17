@@ -19,7 +19,7 @@ class ServiceProvider implements ServiceProviderInterface
     {
         $app['data.deviceDataHistory'] = function ($app)
         {
-            return new DeviceDataHistoryClient($app);
+            return new QueryHistoryClient($app);
         };
     }
 

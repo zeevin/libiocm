@@ -13,7 +13,7 @@ namespace Zeevin\Libiocm\Data;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
-class DeviceDataHistoryClient extends BaseClient implements ClientInterface
+class QueryHistoryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'data';
