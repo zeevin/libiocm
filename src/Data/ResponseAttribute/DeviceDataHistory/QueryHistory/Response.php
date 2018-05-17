@@ -43,4 +43,38 @@ class Response extends BaseResponseAttribute
      * @JMS\Type("array<Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Struct\DeviceDataHistoryDTO>")
      */
     protected $list;
+
+    /**
+     * @return mixed
+     */
+    public function getTotalCount()
+    {
+        return $this->totalCount;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPageNo()
+    {
+        return $this->pageNo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getList()
+    {
+        return $this->list;
+    }
+
+
 }
