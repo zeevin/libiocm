@@ -21,6 +21,10 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new QueryHistoryClient($app);
         };
+        $app['data.queryCapabilities'] = function ($app)
+        {
+            return new QueryCapabilitiesClient($app);
+        };
     }
 
 }

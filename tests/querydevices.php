@@ -22,4 +22,3 @@ $app_queryDevices = $app['dm.queryDevices'];
 /** @var \Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Response $ret */
 $ret =  $app_queryDevices->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
-//print_r($ret->getDevices()[0]->getDeviceInfo());
