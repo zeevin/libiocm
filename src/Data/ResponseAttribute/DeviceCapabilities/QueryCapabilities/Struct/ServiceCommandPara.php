@@ -69,4 +69,77 @@ class ServiceCommandPara
      * @JMS\Type("array")
      */
     protected $enumList;
+
+    /**
+     * @return mixed
+     */
+    public function getParaName()
+    {
+        return $this->paraName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataType()
+    {
+        return $this->dataType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRequired()
+    {
+        return $this->required;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMin()
+    {
+        return $this->min;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMax()
+    {
+        return $this->max;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStep()
+    {
+        return $this->step;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxLength()
+    {
+        return $this->maxLength;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUnit()
+    {
+        return $this->unit;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEnumList()
+    {
+        return $this->enumList;
+    }
+
 }

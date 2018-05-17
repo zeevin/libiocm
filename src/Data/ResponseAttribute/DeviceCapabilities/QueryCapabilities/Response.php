@@ -23,4 +23,13 @@ class Response extends BaseResponseAttribute
      */
     protected $deviceCapabilities;
 
+    /**
+     * @return mixed
+     */
+    public function getDeviceCapabilities()
+    {
+        return $this->deviceCapabilities;
+    }
+
+
 }

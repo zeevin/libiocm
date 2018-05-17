@@ -29,4 +29,22 @@ class DeviceCapabilityDTO
      */
     protected $serviceCapabilities;
 
+    /**
+     * @return mixed
+     */
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
+
+    /**
+     * @return ServiceCapabilityDTO
+     */
+    public function getServiceCapabilities(): ServiceCapabilityDTO
+    {
+        return $this->serviceCapabilities;
+    }
+
+
+
 }

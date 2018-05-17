@@ -33,4 +33,30 @@ class ServiceCommand
      * @JMS\Type("array<Zeevin\Libiocm\Data\ResponseAttribute\DeviceCapabilities\QueryCapabilities\Struct\ServiceCommandResponse>")
      */
     protected $responses;
+
+    /**
+     * @return mixed
+     */
+    public function getCommandName()
+    {
+        return $this->commandName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParas()
+    {
+        return $this->paras;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
+
+
 }
