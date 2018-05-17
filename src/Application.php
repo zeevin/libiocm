@@ -22,6 +22,7 @@ class Application extends ServiceContainer
         Zeevin\Libiocm\Dm\ServiceProvider::class,
         Zeevin\Libiocm\Sub\ServiceProvider::class,
         Zeevin\Libiocm\Data\ServiceProvider::class,
+        Zeevin\Libiocm\Cmd\ServiceProvider::class
     ];
 
 }

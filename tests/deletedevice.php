@@ -16,7 +16,6 @@ $cacheConfig = $app['config']->get('cache');
 
 $request = new \Zeevin\Libiocm\Dm\RequestAttribute\Devices\DeleteDevice\Request();
 $request->setAppId($iotConfig['appId']);
-/** @var \Zeevin\Libiocm\Reg\CheckActivatedStatClient $app_check] */
 $app_del = $app['dm.deleteDevice'];
 $device_id = '79a1c014-3526-43ab-8b84-9d3142291c12';
 
