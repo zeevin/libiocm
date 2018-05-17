@@ -1,6 +1,6 @@
 <?php
 /**
- * @link   http://www.init.lu
+ * @link   https://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/8
  * Time: 下午3:29

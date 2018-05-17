@@ -1,7 +1,7 @@
 <?php
 /**
  * 订阅回调信息页面示例
- * @link   http://www.init.lu
+ * @link   https://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午5:31
