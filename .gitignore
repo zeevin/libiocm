@@ -3,3 +3,4 @@
 vendor/
 tests/config.php
 tests/cache
+tests/logs
