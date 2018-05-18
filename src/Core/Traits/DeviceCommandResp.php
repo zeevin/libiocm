@@ -94,4 +94,110 @@ trait DeviceCommandResp
      * @JMS\Type("integer")
      */
     protected $issuedTimes;
+
+    /**
+     * @return mixed
+     */
+    public function getCommandId()
+    {
+        return $this->commandId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAppId()
+    {
+        return $this->appId;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
+
+    /**
+     * @return CommandDTOV4
+     */
+    public function getCommand(): CommandDTOV4
+    {
+        return $this->command;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCallbackUrl()
+    {
+        return $this->callbackUrl;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExpireTime()
+    {
+        return $this->expireTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getResult()
+    {
+        return $this->result;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCreateTime()
+    {
+        return $this->createTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExecuteTime()
+    {
+        return $this->executeTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlatformIssuedTime()
+    {
+        return $this->platformIssuedTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDeliveredTime()
+    {
+        return $this->deliveredTime;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIssuedTimes()
+    {
+        return $this->issuedTimes;
+    }
+
+
 }
