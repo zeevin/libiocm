@@ -35,6 +35,10 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new CreateTaskClient($app);
         };
+        $app['cmd.queryTask'] = function ($app)
+        {
+            return new QueryTaskClient($app);
+        };
 
     }
 }
