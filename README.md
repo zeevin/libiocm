@@ -17,11 +17,11 @@ Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 - 1.2.6 批量处理
 - 1.2.7 规则 
 
-你可以在生产环境下安装此版本，我会在后续以0.5.X小版本更新的方式逐步完善，到时你可以通过composer update 到0.5.0的稳定版。
+你可以在生产环境下安装此版本，我会在后续以0.5.X小版本更新的方式逐步完善，到时你可以通过composer update 到0.5.x的稳定版。
 
 安装：
 ```bash
-composer require  zeevin/libiocm "@dev"
+composer require zeevin/libiocm
 ```
 
 必须操作：
