@@ -22,5 +22,10 @@ class ServiceProvider implements ServiceProviderInterface
             return new CreateClient($app);
         };
 
+        $app['cmd.query'] = function ($app)
+        {
+            return new QueryClient($app);
+        };
+
     }
 }

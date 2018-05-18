@@ -11,7 +11,6 @@
 namespace Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommands\Create;
 
 use JMS\Serializer\Annotation as JMS;
-use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommands\Create\Struct\PostDeviceCommandReq;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
 
