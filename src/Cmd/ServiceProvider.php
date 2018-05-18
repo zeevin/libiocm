@@ -31,6 +31,10 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new UpdateClient($app);
         };
+        $app['cmd.createTask'] = function ($app)
+        {
+            return new CreateTaskClient($app);
+        };
 
     }
 }
