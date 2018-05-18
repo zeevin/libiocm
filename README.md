@@ -1,4 +1,4 @@
-中国电信物联网开放平台API（北向）对接库
+中国电信物联网开放平台API（北向）对SDK
 =======================
 
 [![GitHub license](https://img.shields.io/github/license/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/blob/master/LICENSE)
