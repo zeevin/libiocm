@@ -53,6 +53,7 @@ Abstract class BaseClient
     {
 //        echo $this->getUri();exit;
         $method = strtoupper($this->getMethod());
+//        echo $method;exit;
         $this->response = $this->getHttpClient()->request(
             $method,
             $this->getUri(),
