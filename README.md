@@ -1,9 +1,11 @@
 中国电信物联网开放平台API（北向）对SDK
 =======================
 
-[![GitHub license](https://img.shields.io/github/license/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/blob/master/LICENSE)
-[![GitHub forks](https://img.shields.io/github/forks/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/network)
-[![GitHub stars](https://img.shields.io/github/stars/zeevin/libiocm.svg)](https://github.com/zeevin/libiocm/stargazers)
+<p align="center">
+<a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/license.svg" alt="License"></a>
+</p>
 
 Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 
