@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Reg\RequetAttribute\Devices\Reg;
+namespace Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\Reg;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
