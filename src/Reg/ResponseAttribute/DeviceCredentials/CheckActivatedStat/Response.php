@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Reg\ResponseAttribute\Devices\CheckActivatedStat;
+namespace Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\CheckActivatedStat;
 
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
