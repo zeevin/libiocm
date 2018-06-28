@@ -14,7 +14,7 @@ $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
-$request = new Zeevin\Libiocm\Reg\RequetAttribute\Devices\RefreshKey\Request();
+$request = new Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\RefreshKey\Request();
 $request->setAppId($iotConfig['appId']);
 /** @var \Zeevin\Libiocm\Reg\RefreshKeyClient $app_refreshKey] */
 $app_refreshKey = $app['reg.refreshKey'];

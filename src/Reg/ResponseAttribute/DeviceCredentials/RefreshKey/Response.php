@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Reg\ResponseAttribute\Devices\RefreshKey;
+namespace Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\RefreshKey;
 
 
 use JMS\Serializer\Annotation as JMS;

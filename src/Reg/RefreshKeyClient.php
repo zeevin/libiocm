@@ -18,7 +18,7 @@ class RefreshKeyClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'reg';
-    protected $prefix = 'devices';
+    protected $prefix = 'deviceCredentials';
     protected $method = 'PUT';
     protected $id = 'refreshKey';
 
