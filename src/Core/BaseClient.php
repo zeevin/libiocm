@@ -11,6 +11,7 @@
 namespace Zeevin\Libiocm\Core;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 use LSS\Array2XML;
 
 Abstract class BaseClient
@@ -22,9 +23,11 @@ Abstract class BaseClient
     protected $app;
     protected $id = null;
     protected $urlExtend = null;
+    protected $httpErrors = [];
     /**
      * 为了适配有些接口GET参数必须从url中代入，而不能从body中传入的问题，如1.2.3.1 按条件批量查询设备，此接口所有的参数
      * 必须要求拼接到url中，真是个蛋疼的接口
+     *
      * @var null
      */
     protected $urlParams = null;
@@ -38,8 +41,10 @@ Abstract class BaseClient
     public function getUri()
     {
         $this->uri = $this->getPath();
-        if ($this->urlParams)
+        if ($this->urlParams) {
             $this->uri = $this->uri.'?'.$this->urlParams;
+        }
+
         return $this->uri;
     }
 
@@ -49,24 +54,35 @@ Abstract class BaseClient
      * @return $this
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function request($body='')
+    public function request($body = '')
     {
 //        echo $this->getUri();exit;
         $method = strtoupper($this->getMethod());
 //        echo $method;exit;
-        $this->response = $this->getHttpClient()->request(
-            $method,
-            $this->getUri(),
-            [
-                'body'   => $body,
-                'verify' => false,
-                'headers' => $this->getHeaders(),
-                'cert'   => [
-                    '/Users/connor/www/libiocm/cert/key.pem',
-                    'IoM@1234',
-                ],
-            ]
-        );
+        try {
+            $this->response = $this->getHttpClient()->request(
+                $method,
+                $this->getUri(),
+                [
+                    'body'    => $body,
+                    'verify'  => false,
+                    'headers' => $this->getHeaders(),
+                    'cert'    => [
+                        '/Users/connor/www/libiocm/cert/key.pem',
+                        'IoM@1234',
+                    ],
+                ]
+            );
+        } catch (ClientException $e) {
+            $this->httpErrors = [
+                'statusCode'   => $e->getCode(),
+                'reasonPhrase' => $e->getResponse()->getReasonPhrase(),
+            ];
+            $message = (array)json_decode(
+                $e->getResponse()->getBody()->getContents()
+            );
+            $this->httpErrors = array_merge($this->httpErrors, $message);
+        }
 
         return $this;
     }
@@ -83,41 +99,52 @@ Abstract class BaseClient
      */
     public function getResult($format = 'object')
     {
-        $body_array = json_decode((string)$this->response->getBody(),true);
-        if(isset($body_array['error_desc']))
-        {
+        if (empty($this->httpErrors)) {
+            $body_array = json_decode(
+                (string)$this->response->getBody(),
+                true
+            );
+
+            $body_array['statusCode'] = $this->response->getStatusCode();
+            $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
+
+
+        }
+        else
+            $body_array = $this->httpErrors;
+
+        if (isset($body_array['error_desc'])) {
             $body_array['errorDesc'] = $body_array['error_desc'];
             unset($body_array['error_desc']);
         }
-        if(isset($body_array['error_code']))
-        {
+        if (isset($body_array['error_code'])) {
             $body_array['errorCode'] = $body_array['error_code'];
             unset($body_array['error_code']);
         }
-        $body_array['statusCode'] = $this->response->getStatusCode();
-        $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
+
+
         $body = json_encode($body_array);
+
 
         if ($format == 'json' || $format == 'text') {
             $this->result = $body;
-        }
-        elseif ($format == 'array')
-        {
-            $this->result = json_decode($body,true);
-        }
-        elseif ($format == 'object') {
-            $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain()).'\ResponseAttribute\\'
+        } elseif ($format == 'array') {
+            $this->result = json_decode($body, true);
+        } elseif ($format == 'object') {
+            $object = 'Zeevin\Libiocm\\'.ucfirst($this->getDomain())
+                .'\ResponseAttribute\\'
                 .ucfirst($this->getPrefix());
-            if($this->getId())
+            if ($this->getId()) {
                 $object .= '\\'.ucfirst($this->getId());
+            }
             $object .= '\Response';
             $this->result = $this->deserialize($body, $object, 'json');
-        }
-        elseif ($format == 'xml') {
-            $arr = json_decode($body,true);
-            $xml = Array2XML::createXML('root',$arr);
+        } elseif ($format == 'xml') {
+            $arr = json_decode($body, true);
+            $xml = Array2XML::createXML('root', $arr);
             $this->result = $xml->saveXML();
         }
+
         return $this->result;
     }
 
@@ -127,8 +154,7 @@ Abstract class BaseClient
     protected function getHeaders()
     {
         $headers = ['User-Agent' => $this->client];
-        if ($this->getPrefix()!='login')
-        {
+        if ($this->getPrefix() != 'login') {
             $app = $this->app;
             $iotConfig = $app['config']->get('iot');
             $headers['Content-Type'] = 'application/json';
@@ -149,8 +175,7 @@ Abstract class BaseClient
         $cacheConfig = $app['config']->get('cache');
         $iotConfig = $app['config']->get('iot');
 
-        if ($ret = $cache->fetch($cacheConfig['oauth_key']))
-        {
+        if ($ret = $cache->fetch($cacheConfig['oauth_key'])) {
 
         }
         //去掉自动刷新accessToken
@@ -163,14 +188,25 @@ Abstract class BaseClient
 //            $app['cache']->save($cacheConfig['oauth_key'],$ret,$ret->getExpiresIn()-600);
 //            $app['cache']->save($cacheConfig['oauth_refresh_key'],$ret->getRefreshToken().':'.$ret->getAccessToken(),86400*28);
 //        }
-        else
-        {
+        else {
             $request = new \Zeevin\Libiocm\Sec\RequestAttribute\Login\Request();
-            $request->setAppId($iotConfig['appId'])->setSecret($iotConfig['secret']);
+            $request->setAppId($iotConfig['appId'])->setSecret(
+                $iotConfig['secret']
+            );
             /** @var \Zeevin\Libiocm\Sec\ResponseAttribute\Login\Response $ret */
-            $ret = $app['sec.login']->request($request->serialize('form-url-encode'))->getResult();
-            $app['cache']->save($cacheConfig['oauth_key'],$ret,$ret->getExpiresIn()-600);
-            $app['cache']->save($cacheConfig['oauth_refresh_key'],$ret->getRefreshToken().':'.$ret->getAccessToken(),86400*28);
+            $ret = $app['sec.login']->request(
+                $request->serialize('form-url-encode')
+            )->getResult();
+            $app['cache']->save(
+                $cacheConfig['oauth_key'],
+                $ret,
+                $ret->getExpiresIn() - 600
+            );
+            $app['cache']->save(
+                $cacheConfig['oauth_refresh_key'],
+                $ret->getRefreshToken().':'.$ret->getAccessToken(),
+                86400 * 28
+            );
         }
 
         return $ret->getAccessToken();
@@ -178,12 +214,14 @@ Abstract class BaseClient
 
     /**
      * 获取appId
+     *
      * @return mixed
      */
     protected function getAppId()
     {
         $app = $this->app;
         $iotConfig = $app['config']->get('iot');
+
         return $iotConfig['appId'];
     }
 
@@ -194,7 +232,8 @@ Abstract class BaseClient
 
     public function getPath()
     {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix().$this->getUrlExtend();
+        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix()
+            .$this->getUrlExtend();
     }
 
     /**
@@ -205,12 +244,12 @@ Abstract class BaseClient
     public function setUrlExtend(...$params)
     {
         $extend = '';
-        foreach ($params as $item)
-        {
+        foreach ($params as $item) {
             $extend .= '/'.$item;
         }
 
         $this->urlExtend = $extend;
+
         return $this;
     }
 
@@ -238,6 +277,7 @@ Abstract class BaseClient
     public function setUrlParams($urlParams)
     {
         $this->urlParams = $urlParams;
+
         return $this;
     }
 
