@@ -20,7 +20,7 @@ class DataConfigDTO
      * 可选
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("dataAgingTime")
-     * @JMS\Type("DateTime<'Ymd\THis\Z'>")
+     * @JMS\Type("integer")
      */
     protected $dataAgingTime;
 
