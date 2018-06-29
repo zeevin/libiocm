@@ -17,7 +17,7 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 class DeleteDeviceClient extends BaseClient implements ClientInterface
 {
 
-    protected $version = 'v1.1.0';
+    protected $version = 'v1.4.0';
     protected $domain = 'dm';
     protected $prefix = 'devices';
     protected $method = 'DELETE';
