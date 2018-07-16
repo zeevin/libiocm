@@ -8,7 +8,7 @@
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Sub\ResponseAttribute\Subscribe\Reg;
+namespace Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\Reg;
 
 
 use Zeevin\Libiocm\Core\BaseResponseAttribute;

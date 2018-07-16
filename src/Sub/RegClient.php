@@ -17,7 +17,7 @@ class RegClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';
     protected $domain = 'sub';
-    protected $prefix = 'subscribe';
+    protected $prefix = 'subscriptions';
     protected $method = 'POST';
     protected $id = 'reg';
 
