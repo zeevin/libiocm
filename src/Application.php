@@ -23,7 +23,8 @@ class Application extends ServiceContainer
         Zeevin\Libiocm\Sub\ServiceProvider::class,
         Zeevin\Libiocm\Data\ServiceProvider::class,
         Zeevin\Libiocm\Cmd\ServiceProvider::class,
-        Zeevin\Libiocm\Signaltrans\ServiceProvider::class
+        Zeevin\Libiocm\Signaltrans\ServiceProvider::class,
+        Zeevin\Libiocm\BatchTask\ServiceProvider::class
     ];
 
 }
