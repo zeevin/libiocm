@@ -22,5 +22,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new RegClient($app);
         };
+        $app['sub.query'] = function ($app)
+        {
+            return new QueryClient($app);
+        };
     }
 }

@@ -2,13 +2,13 @@
 /**
  * @link   https://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
- * Date: 2018/5/17
- * Time: 下午5:18
+ * Date: 2018/7/16
+ * Time: 下午10:41
  * Source: Response.php
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\Reg;
+namespace Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\Query;
 
 
 use JMS\Serializer\Annotation as JMS;
@@ -62,6 +62,7 @@ class Response extends BaseResponseAttribute
     {
         return $this->callbackUrl;
     }
+
 
 
 }
