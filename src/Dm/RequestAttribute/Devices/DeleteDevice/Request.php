@@ -29,7 +29,7 @@ class Request extends BaseRequestAttribute
      * 仅在设备是网关，且连接了传感器时有效。取值null或者true删除网关及其下属设备；取值false时删除网关，并将下属传感器属性变为网关属性
      * 可选
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("appId")
+     * @SerializedName("cascade")
      * @JMS\Type("string")
      */
     protected $cascade;

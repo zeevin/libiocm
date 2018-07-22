@@ -24,6 +24,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.2.1 注册直连设备 Zeevin\Libiocm\Reg\RegClient
  2.2.2 刷新设备密钥 Zeevin\Libiocm\Reg\RefreshKeyClient
  2.2.3 修改设备信息 Zeevin\Libiocm\Dm\UpdateDeviceClient
+ 2.2.4 删除直连设备 Zeevin\Libiocm\Dm\DeleteDeviceClient
 
 ```
 
