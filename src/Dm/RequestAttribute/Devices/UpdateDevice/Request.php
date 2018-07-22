@@ -124,7 +124,7 @@ class Request extends BaseRequestAttribute
      * 设备所在地区
      * 可选
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("name")
+     * @SerializedName("region")
      * @JMS\Type("string")
      */
     protected $region;
@@ -132,7 +132,7 @@ class Request extends BaseRequestAttribute
      * 设备所属组织
      * 可选
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("name")
+     * @SerializedName("organization")
      * @JMS\Type("string")
      */
     protected $organization;
@@ -140,7 +140,7 @@ class Request extends BaseRequestAttribute
      * 设备所在时区
      * 可选
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("name")
+     * @SerializedName("timezone")
      * @JMS\Type("string")
      */
     protected $timezone;
