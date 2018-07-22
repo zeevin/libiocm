@@ -23,6 +23,7 @@ Abstract class BaseClient
     protected $app;
     protected $id = null;
     protected $urlExtend = null;
+    protected $resourcePath ;
     protected $httpErrors = [];
     /**
      * 为了适配有些接口GET参数必须从url中代入，而不能从body中传入的问题，如1.2.3.1 按条件批量查询设备，此接口所有的参数
@@ -36,6 +37,7 @@ Abstract class BaseClient
     public function __construct(ServiceContainer $app)
     {
         $this->app = $app;
+
     }
 
     public function getUri()
@@ -232,7 +234,7 @@ Abstract class BaseClient
 
     public function getPath()
     {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix()
+        return $this->getResourcePath().'/'.$this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix()
             .$this->getUrlExtend();
     }
 
@@ -280,6 +282,17 @@ Abstract class BaseClient
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getResourcePath(): string
+    {
+        return  'iocm/app';
+    }
+
+
+
 
 
     protected function deserialize($data, $object, $format)

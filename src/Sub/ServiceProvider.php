@@ -26,5 +26,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new QueryClient($app);
         };
+        $app['sub.create'] = function ($app)
+        {
+            return new CreateClient($app);
+        };
     }
 }
