@@ -18,7 +18,7 @@ $request = new \Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\CheckActiva
 $request->setAppId($iotConfig['appId']);
 /** @var \Zeevin\Libiocm\Reg\CheckActivatedStatClient $app_check] */
 $app_check = $app['reg.checkActivatedStat'];
-$device_id = '11baaddf-e828-4b7f-87a2-094a7f944b1d';
+$device_id = '1c46924d-6e15-412e-8928-055acc452122';
 /** @var \Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\CheckActivatedStat\Response $ret */
 $ret =  $app_check->setUrlExtend($device_id)->request($request->serialize())->getResult();
 print_r($ret);
