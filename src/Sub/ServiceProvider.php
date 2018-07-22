@@ -34,5 +34,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new BatchQueryClient($app);
         };
+        $app['sub.delete'] = function ($app)
+        {
+            return new DeleteClient($app);
+        };
     }
 }
