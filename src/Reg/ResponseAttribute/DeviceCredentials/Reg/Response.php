@@ -36,7 +36,7 @@ class Response extends BaseResponseAttribute
      * @SerializedName("timeout")
      * @JMS\Type("integer")
      */
-    protected $timeout = 10;
+    protected $timeout;
 
     /**
      * psk码，用于生成设备鉴权参数
