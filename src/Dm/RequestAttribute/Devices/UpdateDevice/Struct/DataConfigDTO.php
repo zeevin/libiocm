@@ -27,7 +27,7 @@ class DataConfigDTO
     /**
      * @return mixed
      */
-    public function getDataAgingTime()
+    public function getDataAgingTime() : int
     {
         return $this->dataAgingTime;
     }
