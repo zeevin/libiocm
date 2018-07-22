@@ -52,9 +52,4 @@ class CreateClient  extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
-    public function getPath()
-    {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix();
-    }
 }
