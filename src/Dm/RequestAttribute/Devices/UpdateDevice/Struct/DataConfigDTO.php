@@ -33,11 +33,14 @@ class DataConfigDTO
     }
 
     /**
-     * @param mixed $dataAgingTime
+     * @param $dataAgingTime
+     *
+     * @return $this
      */
     public function setDataAgingTime($dataAgingTime)
     {
         $this->dataAgingTime = $dataAgingTime;
+        return $this;
     }
 
 
