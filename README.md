@@ -30,7 +30,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
 2.3 批量处理
  2.3.1 创建批量任务 Zeevin\Libiocm\BatchTask\CreateClient
  2.3.2 查询单个任务信息 Zeevin\Libiocm\BatchTask\QueryClient :响应中的param参数未适配动态类型
- 
+ 2.3.3 查询任务详情信息 Zeevin\Libiocm\BatchTask\QueryDetailClient
 ```
 
 ```text
