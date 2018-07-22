@@ -18,27 +18,27 @@ class DeviceReg
     /**
      * 文件上传时返回的文件ID
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("fieldId")
+     * @SerializedName("fileId")
      * @JMS\Type("string")
      */
-    protected $fieldId;
+    protected $fileId;
 
     /**
      * @return mixed
      */
     public function getFieldId()
     {
-        return $this->fieldId;
+        return $this->fileId;
     }
 
     /**
-     * @param $fieldId
+     * @param $fileId
      *
      * @return $this
      */
-    public function setFieldId($fieldId)
+    public function setFileId($fileId)
     {
-        $this->fieldId = $fieldId;
+        $this->fileId = $fileId;
         return $this;
     }
 

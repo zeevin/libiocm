@@ -28,8 +28,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.2.5 查询设备激活状态 Zeevin\Libiocm\Reg\CheckActivatedStatClient
  
 2.3 批量处理
- 
-
+ 2.3.1 创建批量任务 Zeevin\Libiocm\BatchTask\CreateClient
 ```
 
 ```text
