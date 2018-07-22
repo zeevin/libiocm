@@ -18,7 +18,7 @@ $request = new Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\RefreshKey\R
 $request->setAppId($iotConfig['appId']);
 /** @var \Zeevin\Libiocm\Reg\RefreshKeyClient $app_refreshKey] */
 $app_refreshKey = $app['reg.refreshKey'];
-$device_id = '11baaddf-e828-4b7f-87a2-094a7f944b1d';
+$device_id = '2f41a999-3031-41bf-8aeb-a4d27eb9b547';
 
 $ret =  $app_refreshKey->setUrlExtend($device_id)->request($request->serialize())->getResult();
 print_r($ret);

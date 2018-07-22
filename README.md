@@ -15,6 +15,15 @@ Libiocm 实现了对中国电信物联网开发平台（北向）API的对接。
 
 ```text
 master 分支正在迭代开发，对应电信API的版本是1.5.1
+对接进度：
+2.1 应用安全接入
+ 2.1.1 鉴权 Zeevin\Libiocm\Sec\LoginClient
+ 2.1.2 刷新token Zeevin\Libiocm\Sec\RefreshTokenClient
+
+2.2 设备管理
+ 2.2.1 注册直连设备 Zeevin\Libiocm\Reg\RegClient
+ 2.2.2 刷新设备密钥 Zeevin\Libiocm\Reg\RefreshKeyClient
+ 2.2.3 修改设备信息 Zeevin\Libiocm\Dm\UpdateDeviceClient
 
 ```
 
