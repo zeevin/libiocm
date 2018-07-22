@@ -22,6 +22,10 @@ class ServiceProvider implements ServiceProviderInterface
             return new CreateClient($app);
         };
 
+        $app['batchtask.query'] = function ($app)
+        {
+            return new QueryClient($app);
+        };
 
 
     }
