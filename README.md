@@ -36,6 +36,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
 
 2.5 订阅管理
  2.5.1 订阅平台业务数据 Zeevin\Libiocm\Sub\RegClient
+ 2.5.2 订阅平台管理数据
  
 ```
 
