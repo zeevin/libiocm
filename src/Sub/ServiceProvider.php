@@ -30,5 +30,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new CreateClient($app);
         };
+        $app['sub.query.batch'] = function ($app)
+        {
+            return new BatchQueryClient($app);
+        };
     }
 }
