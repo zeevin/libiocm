@@ -55,6 +55,6 @@ class RegClient extends BaseClient implements ClientInterface
 
     public function getPath()
     {
-        return $this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix().'?appId='.$this->getAppId();
+        return $this->getResourcePath().'/'.$this->getDomain().'/'.$this->getVersion().'/'.$this->getPrefix().'?appId='.$this->getAppId();
     }
 }
