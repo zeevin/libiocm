@@ -77,7 +77,7 @@ SDK 0.5.0 版本对接的电信API版本是1.3.1，并且暂未实现如下接�
 ```
 
 
-安装（针对的API版本是1.3.1，如果想使用1.5.1请直接clone master分支）：
+安装
 ```bash
 composer require zeevin/libiocm
 ```
