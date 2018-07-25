@@ -48,6 +48,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
 
 2.7 命令下发
  2.7.1 创建设备命令 Zeevin\Libiocm\Cmd\CreateClient
+ 2.7.2 查询设备命令 Zeevin\Libiocm\Cmd\QueryClient
 
 ```
 
