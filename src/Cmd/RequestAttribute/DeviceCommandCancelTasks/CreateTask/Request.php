@@ -30,7 +30,6 @@ class Request extends BaseRequestAttribute
      * @var CreateDeviceCommandCancelTaskReq
      * @JMS\Inline
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("body")
      * @JMS\Type("Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommandCancelTasks\CreateTask\Struct\CreateDeviceCommandCancelTaskReq")
      */
     protected $body;
