@@ -17,7 +17,7 @@ $cacheConfig = $app['config']->get('cache');
 $request = new \Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommands\Create\Request();
 $device_id = '2f41a999-3031-41bf-8aeb-a4d27eb9b547';
 $random = bin2hex(random_bytes(4));
-$request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('TEST_SERVICEID_'.$random)
+$request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('TEST_SERVICEID'.$random)
     ->setMethod('TEST_METHOD'.$random)->setParas(['t1'=>'a','t2'=>'b']);
 
 /** @var \Zeevin\Libiocm\Cmd\CreateClient $app1 */
@@ -27,7 +27,7 @@ $app1 = $app['cmd.create'];
 //此接口有几个异常的代码的请求状态码是404和500，需要单独try catch此类异常，按说只要不是对方服务器执行出问题，都应该用200的状态码返回数据
 try
 {
-    $ret =  $app1->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request->serialize())->getResult('json');
+    $ret =  $app1->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request->serialize())->getResult();
     print_r($ret);
 }catch (Exception $e)
 {

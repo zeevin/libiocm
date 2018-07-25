@@ -41,6 +41,7 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.5.3 查询单个订阅  Zeevin\Libiocm\Sub\QueryClient
  2.5.4 批量查询订阅 Zeevin\Libiocm\Sub\BatchQueryClient
  2.5.5 删除单个订阅 Zeevin\Libiocm\Sub\DeleteClient
+ 2.5.6 批量删除订阅 Zeevin\Libiocm\Sub\BatchDeleteClient
  
 ```
 
