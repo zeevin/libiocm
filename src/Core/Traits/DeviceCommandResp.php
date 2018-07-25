@@ -96,6 +96,13 @@ trait DeviceCommandResp
     protected $issuedTimes;
 
     /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("maxRetransmit")
+     * @JMS\Type("integer")
+     */
+    protected $maxRetransmit;
+
+    /**
      * @return mixed
      */
     public function getCommandId()
@@ -198,6 +205,16 @@ trait DeviceCommandResp
     {
         return $this->issuedTimes;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxRetransmit()
+    {
+        return $this->maxRetransmit;
+    }
+
+
 
 
 }

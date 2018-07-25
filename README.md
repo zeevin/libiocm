@@ -43,6 +43,12 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.5.5 删除单个订阅 Zeevin\Libiocm\Sub\DeleteClient
  2.5.6 批量删除订阅 Zeevin\Libiocm\Sub\BatchDeleteClient
  
+2.6 消息推送 :此为推送信息，最后适配
+
+
+2.7 命令下发
+ 2.7.1 创建设备命令 Zeevin\Libiocm\Cmd\CreateClient
+
 ```
 
 ```text

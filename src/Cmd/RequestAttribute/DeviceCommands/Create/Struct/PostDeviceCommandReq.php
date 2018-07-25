@@ -40,6 +40,12 @@ class PostDeviceCommandReq
      * @JMS\Type("integer")
      */
     protected $expireTime;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("maxRetransmit")
+     * @JMS\Type("integer")
+     */
+    protected $maxRetransmit;
 
     /**
      * @return mixed
@@ -106,6 +112,27 @@ class PostDeviceCommandReq
         $this->expireTime = $expireTime;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMaxRetransmit()
+    {
+        return $this->maxRetransmit;
+    }
+
+    /**
+     * @param $maxRetransmit
+     *
+     * @return $this
+     */
+    public function setMaxRetransmit($maxRetransmit)
+    {
+        $this->maxRetransmit = $maxRetransmit;
+        return $this;
+    }
+
+
 
 
 }
