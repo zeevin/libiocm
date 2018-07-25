@@ -17,6 +17,13 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
+     * 应用唯一标识
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("appId")
+     * @JMS\Type("string")
+     */
+    protected $appId;
+    /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceId")
      * @JMS\Type("string")
@@ -40,13 +47,6 @@ class Request extends BaseRequestAttribute
      * @JMS\Type("string")
      */
     protected $property;
-    /**
-     * 应用唯一标识
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("appId")
-     * @JMS\Type("string")
-     */
-    protected $appId;
     /**
      *
      * @JMS\XmlElement(cdata=false)

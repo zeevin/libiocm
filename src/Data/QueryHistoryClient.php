@@ -15,7 +15,7 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 class QueryHistoryClient extends BaseClient implements ClientInterface
 {
-    protected $version = 'v1.1.0';
+    protected $version = 'v1.2.0';
     protected $domain = 'data';
     protected $prefix = 'deviceDataHistory';
     protected $method = 'GET';
