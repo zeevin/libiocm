@@ -47,11 +47,13 @@ class DeviceInfo
     protected $manufacturerName;
     /**
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("mac")
      * @JMS\Type("string")
      */
     protected $mac;
     /**
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("location")
      * @JMS\Type("string")
      */
     protected $location;
@@ -93,40 +95,10 @@ class DeviceInfo
     protected $protocolType;
     /**
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("signalStrength")
-     * @JMS\Type("string")
-     */
-    protected $signalStrength;
-    /**
-     * @JMS\XmlElement(cdata=false)
      * @SerializedName("bridgeId")
      * @JMS\Type("string")
      */
     protected $bridgeId;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("supportedSecurity")
-     * @JMS\Type("string")
-     */
-    protected $supportedSecurity;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("isSecurity")
-     * @JMS\Type("string")
-     */
-    protected $isSecurity;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("sigVersion")
-     * @JMS\Type("string")
-     */
-    protected $sigVersion;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("runningStatus")
-     * @JMS\Type("string")
-     */
-    protected $runningStatus;
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("status")
@@ -145,6 +117,45 @@ class DeviceInfo
      * @JMS\Type("string")
      */
     protected $mute;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("supportedSecurity")
+     * @JMS\Type("string")
+     */
+    protected $supportedSecurity;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("isSecurity")
+     * @JMS\Type("string")
+     */
+    protected $isSecurity;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("signalStrength")
+     * @JMS\Type("string")
+     */
+    protected $signalStrength;
+
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("sigVersion")
+     * @JMS\Type("string")
+     */
+    protected $sigVersion;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("serialNumber")
+     * @JMS\Type("string")
+     */
+    protected $serialNumber;
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("batteryLevel")
+     * @JMS\Type("string")
+     */
+    protected $batteryLevel;
+
+
 
     /**
      * @return mixed

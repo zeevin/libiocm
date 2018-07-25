@@ -11,6 +11,7 @@
 namespace Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct;
 
 
+
 class DeviceService
 {
     use \Zeevin\Libiocm\Core\Traits\DeviceService;

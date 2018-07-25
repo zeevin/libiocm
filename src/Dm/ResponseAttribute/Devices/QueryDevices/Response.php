@@ -26,17 +26,17 @@ class Response extends BaseResponseAttribute
     /**
      *
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("pageSize")
-     * @JMS\Type("integer")
-     */
-    protected $pageSize;
-    /**
-     *
-     * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
+    /**
+     *
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("pageSize")
+     * @JMS\Type("integer")
+     */
+    protected $pageSize;
     /**
      *
      * @JMS\XmlElement(cdata=false)

@@ -17,16 +17,22 @@ trait DeviceService
 {
     /**
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("serviceId")
+     * @JMS\Type("string")
+     */
+    protected $serviceId;
+    /**
+     * @JMS\XmlElement(cdata=false)
      * @SerializedName("serviceType")
      * @JMS\Type("string")
      */
     protected $serviceType;
     /**
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("serviceId")
-     * @JMS\Type("string")
+     * @SerializedName("serviceInfo")
+     * @JMS\Type("Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SingleQuery\Struct\ServiceInfo")
      */
-    protected $serviceId;
+    protected $serviceInfo;
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("data")
@@ -39,10 +45,5 @@ trait DeviceService
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $eventTime;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("serviceInfo")
-     * @JMS\Type("string")
-     */
-    protected $serviceInfo;
+
 }

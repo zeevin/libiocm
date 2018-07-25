@@ -58,25 +58,7 @@ trait GetDeviceRspDTO
      * @JMS\Type("array<Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\DeviceService>")
      */
     protected $services;
-    /**
-     * @var ConnectionInfo
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("connectionInfo")
-     * @JMS\Type("Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\ConnectionInfo")
-     */
-    protected $connectionInfo;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("location")
-     * @JMS\Type("string")
-     */
-    protected $location;
-    /**
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("devGroupIds")
-     * @JMS\Type("array<string>")
-     */
-    protected $devGroupIds;
+
 
     /**
      * @return mixed
@@ -134,29 +116,6 @@ trait GetDeviceRspDTO
         return $this->services;
     }
 
-    /**
-     * @return ConnectionInfo
-     */
-    public function getConnectionInfo()
-    {
-        return $this->connectionInfo;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLocation()
-    {
-        return $this->location;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDevGroupIds()
-    {
-        return $this->devGroupIds;
-    }
 
 }
 

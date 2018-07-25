@@ -16,7 +16,7 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 class SingleQueryClient extends BaseClient implements ClientInterface
 {
-    protected $version = 'v1.3.0';
+    protected $version = 'v1.4.0';
     protected $domain = 'dm';
     protected $prefix = 'devices';
     protected $method = 'GET';

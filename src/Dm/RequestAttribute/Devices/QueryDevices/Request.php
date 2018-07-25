@@ -48,13 +48,6 @@ class Request extends BaseRequestAttribute
     /**
      *
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("protocolType")
-     * @JMS\Type("string")
-     */
-    protected $protocolType;
-    /**
-     *
-     * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
@@ -93,6 +86,13 @@ class Request extends BaseRequestAttribute
      * @JMS\Type("string")
      */
     protected $sort;
+
+    /**
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("select")
+     * @JMS\Type("string")
+     */
+    protected $select;
 
     /**
      * @return mixed
@@ -167,25 +167,6 @@ class Request extends BaseRequestAttribute
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getProtocolType()
-    {
-        return $this->protocolType;
-    }
-
-    /**
-     * @param $protocolType
-     *
-     * @return $this
-     */
-    public function setProtocolType($protocolType)
-    {
-        $this->protocolType = $protocolType;
         return $this;
     }
 
@@ -300,6 +281,25 @@ class Request extends BaseRequestAttribute
     public function setSort($sort)
     {
         $this->sort = $sort;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSelect()
+    {
+        return $this->select;
+    }
+
+    /**
+     * @param $select
+     *
+     * @return $this
+     */
+    public function setSelect($select)
+    {
+        $this->select = $select;
         return $this;
     }
 

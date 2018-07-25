@@ -52,6 +52,10 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.7.3 修改设备命令 Zeevin\Libiocm\Cmd\UpdateClient
  2.7.4 创建设备命令撤销任务 Zeevin\Libiocm\Cmd\CreateTaskClient
  2.7.5 查询设备命令撤销任务 Zeevin\Libiocm\Cmd\QueryTaskClient
+ 
+2.8 查询设备命令撤销任务 
+ 2.8.1 查询单个设备信息 Zeevin\Libiocm\Dm\SingleQueryClient
+ 2.8.2 批量查询设备信息列表 Zeevin\Libiocm\Dm\QueryDevicesClient
 
 ```
 

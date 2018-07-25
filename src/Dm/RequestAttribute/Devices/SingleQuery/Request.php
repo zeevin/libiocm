@@ -24,14 +24,14 @@ class Request extends BaseRequestAttribute
      * @JMS\Type("string")
      */
     protected $appId;
-
     /**
-     * 设备唯一标识（含网关的设备唯一标识），1-64个字节
+     * 指定查询条件，可选值:imsi
+     * 可选
      * @JMS\XmlElement(cdata=false)
-     * @SerializedName("deviceId")
+     * @SerializedName("select")
      * @JMS\Type("string")
      */
-    protected $deviceId;
+    protected $select;
 
     /**
      * @return mixed
@@ -55,22 +55,21 @@ class Request extends BaseRequestAttribute
     /**
      * @return mixed
      */
-    public function getDeviceId()
+    public function getSelect()
     {
-        return $this->deviceId;
+        return $this->select;
     }
 
     /**
-     * @param $deviceId
+     * @param $select
      *
      * @return $this
      */
-    public function setDeviceId($deviceId)
+    public function setSelect($select)
     {
-        $this->deviceId = $deviceId;
+        $this->select = $select;
         return $this;
     }
-
 
 
 }
