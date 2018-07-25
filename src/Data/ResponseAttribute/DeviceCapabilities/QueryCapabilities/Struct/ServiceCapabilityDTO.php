@@ -29,6 +29,12 @@ class ServiceCapabilityDTO
     protected $serviceType;
     /**
      * @JMS\XmlElement(cdata=false)
+     * @SerializedName("option")
+     * @JMS\Type("string")
+     */
+    protected $option;
+    /**
+     * @JMS\XmlElement(cdata=false)
      * @SerializedName("description")
      * @JMS\Type("string")
      */
