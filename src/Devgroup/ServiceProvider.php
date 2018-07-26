@@ -26,5 +26,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new DeleteClient($app);
         };
+        $app['devgroups.update'] = function ($app)
+        {
+            return new UpdateClient($app);
+        };
     }
 }
