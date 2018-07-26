@@ -60,7 +60,8 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.8.3 查询设备历史数据 Zeevin\Libiocm\Data\QueryHistoryClient :响应参数中含有totalCount、pageSize、pageNo，但是文档没写，这里我仍然保留
  2.8.4 查询设备服务能力 Zeevin\Libiocm\Data\QueryCapabilitiesClient
  
-2.9 设备组管理 :适配中 
+2.9 设备组管理
+ 2.9.1 创建设备组 Zeevin\Libiocm\Devgroup\CreateClient
 2.10 设备升级 ：适配中
 
 ```
