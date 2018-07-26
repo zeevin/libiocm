@@ -30,5 +30,9 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new UpdateClient($app);
         };
+        $app['devgroups.query'] = function ($app)
+        {
+            return new QueryClient($app);
+        };
     }
 }

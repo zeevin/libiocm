@@ -64,6 +64,9 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.9.1 创建设备组 Zeevin\Libiocm\Devgroup\CreateClient
  2.9.2 删除设备组 Zeevin\Libiocm\Devgroup\DeleteClient
  2.9.3 修改设备组 Zeevin\Libiocm\Devgroup\UpdateClient
+ 2.9.4 查询设备组详情 Zeevin\Libiocm\Devgroup\QueryClient 文档中返回值：queryDevGroups实际不存在，返回的时list
+ 
+ 
 2.10 设备升级 ：适配中
 
 ```
