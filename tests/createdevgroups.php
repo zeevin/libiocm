@@ -15,7 +15,7 @@ $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
 $request = new Zeevin\Libiocm\Devgroup\RequestAttribute\DevGroups\Create\Request();
-$request->setAppId($iotConfig['appId'])->setName('test_group3')->setDescription('test33');
+$request->setAppId($iotConfig['appId'])->setName('test_group99')->setDescription('test99');
 
 $app1 = $app['devgroups.create'];
 //print_r($request->serialize());exit;

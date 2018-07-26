@@ -66,7 +66,8 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
  2.9.3 修改设备组 Zeevin\Libiocm\Devgroup\UpdateClient
  2.9.4 查询设备组详情 Zeevin\Libiocm\Devgroup\QueryClient 文档中返回值：queryDevGroups实际不存在，返回的是list
  2.9.5 查询指定设备组 Zeevin\Libiocm\Devgroup\SpecificQueryClient
- 
+ 2.9.6 查询指定设备组成员 Zeevin\Libiocm\Dm\SpecificMemberQueryClient
+ 2.9.7 增加设备组成员 Zeevin\Libiocm\Dm\SpecificMemberAppendClient  返回值中的deviceIds实际都是返回空，与文档不一致
  
  
 2.10 设备升级 ：适配中

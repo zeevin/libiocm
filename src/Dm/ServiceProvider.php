@@ -34,6 +34,14 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new SingleQueryClient($app);
         };
+        $app['dm.query.devgroup.specific.member'] = function ($app)
+        {
+            return new SpecificMemberQueryClient($app);
+        };
+        $app['dm.append.devgroup.specific.member'] = function ($app)
+        {
+            return new SpecificMemberAppendClient($app);
+        };
 
     }
 

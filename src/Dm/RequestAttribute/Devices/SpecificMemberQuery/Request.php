@@ -3,12 +3,12 @@
  * @link   https://www.init.lu
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
- * Time: 下午8:20
+ * Time: 下午9:13
  * Source: Request.php
  * Project: libiocm
  */
 
-namespace Zeevin\Libiocm\Devgroup\RequestAttribute\DevGroups\Query;
+namespace Zeevin\Libiocm\Dm\RequestAttribute\Devices\SpecificMemberQuery;
 
 
 use JMS\Serializer\Annotation as JMS;
@@ -18,7 +18,14 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 写授权应用的应用 ID
+     * 设备组 ID，在增加设备组后由 IoT 平台 返回获得
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("devGroupId")
+     * @JMS\Type("string")
+     */
+    protected $devGroupId;
+    /**
+     * 当查询授权应用下的设备组时需要填 写，填写授权应用的应用 ID
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("accessAppId")
      * @JMS\Type("string")
@@ -34,19 +41,31 @@ class Request extends BaseRequestAttribute
      */
     protected $pageNo;
     /**
-     * 每页设备组记录数量，默认值为 1
+     * 每页设备组记录数量，默认值为 10
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
+
     /**
-     * 设备组名称
-     * @JMS\XmlElement(cdata=false)
-     * @SerializedName("name")
-     * @JMS\Type("string")
+     * @return mixed
      */
-    protected $name;
+    public function getDevGroupId()
+    {
+        return $this->devGroupId;
+    }
+
+    /**
+     * @param $devGroupId
+     *
+     * @return $this
+     */
+    public function setDevGroupId($devGroupId)
+    {
+        $this->devGroupId = $devGroupId;
+        return $this;
+    }
 
     /**
      * @return mixed
@@ -102,25 +121,6 @@ class Request extends BaseRequestAttribute
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param $name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
         return $this;
     }
 
