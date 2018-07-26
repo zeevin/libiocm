@@ -3,6 +3,7 @@
 
 <p align="center">
 <a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/d/monthly" alt="Monthly downloads"></a>
 <a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/zeevin/libiocm"><img src="https://poser.pugx.org/zeevin/libiocm/license.svg" alt="License"></a>
 </p>
