@@ -25,6 +25,7 @@ Abstract class BaseClient
     protected $urlExtend = null;
     protected $resourcePath ;
     protected $httpErrors = [];
+    protected $config;
     /**
      * 为了适配有些接口GET参数必须从url中代入，而不能从body中传入的问题，如1.2.3.1 按条件批量查询设备，此接口所有的参数
      * 必须要求拼接到url中，真是个蛋疼的接口
@@ -37,6 +38,7 @@ Abstract class BaseClient
     public function __construct(ServiceContainer $app)
     {
         $this->app = $app;
+        $this->config = $app['config']->get('iot');
 
     }
 
@@ -70,7 +72,7 @@ Abstract class BaseClient
                     'verify'  => false,
                     'headers' => $this->getHeaders(),
                     'cert'    => [
-                        '/Users/connor/www/libiocm/cert/key.pem',
+                        $this->config['cert'],
                         'IoM@1234',
                     ],
                 ]
