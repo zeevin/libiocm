@@ -17,6 +17,7 @@ return [
         [
             'appId'  => 'arpcdre4vat8oDWlmDOmvaU23444',
             'secret' => 'X7S_fDYnk5AFlN333kKWNHd44444',
+            'cert'   => __DIR__.DIRECTORY_SEPARATOR.'../cert/key.pem'
         ],
     'cache' =>
         [
