@@ -32,6 +32,13 @@ class Response extends BaseResponseAttribute
      */
     protected $description;
     /**
+     * 设备组 ID，由平台自动生成
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("id")
+     * @JMS\Type("string")
+     */
+    protected $id;
+    /**
      * 应用唯一标识
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
@@ -93,5 +100,11 @@ class Response extends BaseResponseAttribute
         return $this->curDevNum;
     }
 
-
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 }
