@@ -42,6 +42,10 @@ class ServiceProvider implements ServiceProviderInterface
         {
             return new SpecificMemberAppendClient($app);
         };
+        $app['dm.delete.devgroup.specific.member'] = function ($app)
+        {
+            return new SpecificMemberDeleteClient($app);
+        };
 
     }
 
