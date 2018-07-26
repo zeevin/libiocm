@@ -82,6 +82,10 @@ master 分支正在迭代开发，对应电信API的版本是1.5.1
 composer require zeevin/libiocm
 ```
 
+更新，因目前还有几个接口未对接，如果先安装了本库，后期可以随时更新，以便在全部对接完后使用完整库。
+```bash
+composer update zeevin/libiocm
+```
 必须操作：
 
 添加一个自定义的autoload.php文件，自己的程序调动的时候引用此autoload.php,不要直接引用vendor/autoload.php内容如下：
