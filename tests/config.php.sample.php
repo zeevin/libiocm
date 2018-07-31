@@ -11,7 +11,7 @@
 return [
     'http'  =>
         [
-            'base_uri' => 'https://180.101.147.89:8743/iocm/app/',
+            'base_uri' => 'https://180.101.147.89:8743/',
         ],
     'iot'   =>
         [
