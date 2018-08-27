@@ -37,7 +37,7 @@ trait DeviceCommandResp
      * @var CommandDTOV4
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("command")
-     * @JMS\Type("Zeevin\Libiocm\Core\Traits\CommandDTOV4")
+     * @JMS\Type("Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommands\Create\Struct\CommandDTOV4")
      */
     protected $command;
     /**
