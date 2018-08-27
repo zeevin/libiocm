@@ -17,7 +17,7 @@ $cacheConfig = $app['config']->get('cache');
 $request = new \Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\Reg\Request();
 $random = 'TEST_'.bin2hex(random_bytes(6));
 //var_dump($random);
-$request->setNodeId($random)->setTimeout(0);
+$request->setNodeId($random)->setTimeout(0)->setVerifyCode($random);
 
 $ret = $app['reg.reg']->request($request->serialize())->getResult();
 print_r($ret);
