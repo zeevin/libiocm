@@ -203,7 +203,7 @@ class Request extends BaseRequestAttribute
     /**
      * @return bool
      */
-    public function getisSecure() :bool
+    public function getIsSecure() :bool
     {
         return $this->isSecure;
     }
