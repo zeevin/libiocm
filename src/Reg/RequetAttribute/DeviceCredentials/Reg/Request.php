@@ -74,6 +74,17 @@ class Request extends BaseRequestAttribute
      * @JMS\Type("integer")
      */
     protected $timeout;
+    /**
+     * 指定设备是否为安全设备，默认 值为 false。
+     *  true:安全设备
+     *  false:非安全设备
+     * 说明
+     * 如果用户需要注册安全设备， isSecure 参数必须填写。
+     * @JMS\XmlElement(cdata=false)
+     * @SerializedName("isSecure")
+     * @JMS\Type("boolean")
+     */
+    protected $isSecure = false;
 
     /**
      * @return mixed
@@ -188,6 +199,27 @@ class Request extends BaseRequestAttribute
         $this->timeout = $timeout;
         return $this;
     }
+
+    /**
+     * @return bool
+     */
+    public function getisSecure() :bool
+    {
+        return $this->isSecure;
+    }
+
+    /**
+     * @param bool $isSecure
+     *
+     * @return $this
+     */
+    public function setIsSecure( bool $isSecure)
+    {
+        $this->isSecure = $isSecure;
+        return $this;
+    }
+
+
 
 
 }
