@@ -300,6 +300,7 @@ Abstract class BaseClient
     protected function deserialize($data, $object, $format)
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
+        $object = class_exists($object)?$object:BaseResponseAttribute::class;
 
         return $serializer->deserialize($data, $object, $format);
     }

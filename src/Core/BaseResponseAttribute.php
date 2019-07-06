@@ -13,7 +13,7 @@ namespace Zeevin\Libiocm\Core;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 
-abstract class BaseResponseAttribute
+class BaseResponseAttribute
 {
     /**
      * 响应头信息statusCode
