@@ -17,12 +17,12 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['sec.login'] = function ($app)
+        $app['secLogin'] = function ($app)
         {
             return new LoginClient($app);
         };
 
-        $app['sec.refreshToken'] = function ($app)
+        $app['secRefreshToken'] = function ($app)
         {
             return new RefreshTokenClient($app);
         };

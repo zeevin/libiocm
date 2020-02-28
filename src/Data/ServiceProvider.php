@@ -17,11 +17,11 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['data.deviceDataHistory'] = function ($app)
+        $app['dataDeviceDataHistory'] = function ($app)
         {
             return new QueryHistoryClient($app);
         };
-        $app['data.queryCapabilities'] = function ($app)
+        $app['dataQueryCapabilities'] = function ($app)
         {
             return new QueryCapabilitiesClient($app);
         };

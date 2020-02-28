@@ -18,23 +18,23 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['devgroups.create'] = function ($app)
+        $app['devGroupsCreate'] = function ($app)
         {
             return new CreateClient($app);
         };
-        $app['devgroups.delete'] = function ($app)
+        $app['devGroupsDelete'] = function ($app)
         {
             return new DeleteClient($app);
         };
-        $app['devgroups.update'] = function ($app)
+        $app['devGroupsUpdate'] = function ($app)
         {
             return new UpdateClient($app);
         };
-        $app['devgroups.query'] = function ($app)
+        $app['devGroupsQuery'] = function ($app)
         {
             return new QueryClient($app);
         };
-        $app['devgroups.query.specific'] = function ($app)
+        $app['devGroupsQuerySpecific'] = function ($app)
         {
             return new SpecificQueryClient($app);
         };

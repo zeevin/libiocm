@@ -17,16 +17,16 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['batchtask.create'] = function ($app)
+        $app['batchTaskCreate'] = function ($app)
         {
             return new CreateClient($app);
         };
 
-        $app['batchtask.query'] = function ($app)
+        $app['batchTaskQuery'] = function ($app)
         {
             return new QueryClient($app);
         };
-        $app['batchtask.query.detail'] = function ($app)
+        $app['batchTaskQueryDetail'] = function ($app)
         {
             return new QueryDetailClient($app);
         };

@@ -18,27 +18,27 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['sub.reg'] = function ($app)
+        $app['subReg'] = function ($app)
         {
             return new RegClient($app);
         };
-        $app['sub.query'] = function ($app)
+        $app['subQuery'] = function ($app)
         {
             return new QueryClient($app);
         };
-        $app['sub.create'] = function ($app)
+        $app['subCreate'] = function ($app)
         {
             return new CreateClient($app);
         };
-        $app['sub.query.batch'] = function ($app)
+        $app['subQueryBatch'] = function ($app)
         {
             return new BatchQueryClient($app);
         };
-        $app['sub.delete'] = function ($app)
+        $app['subDelete'] = function ($app)
         {
             return new DeleteClient($app);
         };
-        $app['sub.delete.batch'] = function ($app)
+        $app['subDeleteBatch'] = function ($app)
         {
             return new BatchDeleteClient($app);
         };

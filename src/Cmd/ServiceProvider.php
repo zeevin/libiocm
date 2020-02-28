@@ -17,25 +17,25 @@ class ServiceProvider implements ServiceProviderInterface
 {
     public function register(Container $app)
     {
-        $app['cmd.create'] = function ($app)
+        $app['cmdCreate'] = function ($app)
         {
             return new CreateClient($app);
         };
 
-        $app['cmd.query'] = function ($app)
+        $app['cmdQuery'] = function ($app)
         {
             return new QueryClient($app);
         };
 
-        $app['cmd.update'] = function ($app)
+        $app['cmdUpdate'] = function ($app)
         {
             return new UpdateClient($app);
         };
-        $app['cmd.createTask'] = function ($app)
+        $app['cmdCreateTask'] = function ($app)
         {
             return new CreateTaskClient($app);
         };
-        $app['cmd.queryTask'] = function ($app)
+        $app['cmdQueryTask'] = function ($app)
         {
             return new QueryTaskClient($app);
         };
