@@ -13,7 +13,6 @@ namespace Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\Reg;
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
-use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
 /**
  * Class Request

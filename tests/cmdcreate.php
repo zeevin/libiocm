@@ -8,17 +8,16 @@
  * Project: libiocm
  */
 
-require '../vendor/autoload.php';
+require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
 $request = new \Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommands\Create\Request();
-$device_id = '2f41a999-3031-41bf-8aeb-a4d27eb9b547';
-$random = bin2hex(random_bytes(4));
-$request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('TEST_SERVICEID'.$random)
-    ->setMethod('TEST_METHOD'.$random)->setParas(['t1'=>'a','t2'=>'b']);
+$device_id = '12b3f9b0-39a9-411b-b2e0-d4ffdace3e09';
+$request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('upstream')
+    ->setMethod('command')->setParas(['commandLen'=>8,'commandData'=>'qgMCBAALy1U=']);
 
 /** @var \Zeevin\Libiocm\Cmd\CreateClient $app1 */
 $app1 = $app['cmd.create'];
@@ -28,7 +27,7 @@ $app1 = $app['cmd.create'];
 try
 {
     $ret =  $app1->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request->serialize())->getResult();
-    print_r($ret);
+    print_r($ret->getStatusCode());
 }catch (Exception $e)
 {
     echo json_encode(['errorcode'=>$e->getCode(),'errormessage'=>$e->getMessage()]);

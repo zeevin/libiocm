@@ -1,36 +1,43 @@
 {
-    "name": "zeevin/libiocm",
-    "description": "中国电信物联网开放平台API对接库",
-    "type": "library",
-    "license": "MIT",
-    "homepage": "https://github.com/zeevin/libiocm",
-    "keywords": ["iocm", "中国电信北向API", "OceanConnect", "nb-iot", "nbiot"],
-    "authors": [
-        {
-            "name": "CaoKang",
-            "email": "caokang@outlook.com",
-            "homepage": "https://www.init.lu"
-        }
-    ],
-    "require": {
-        "php": ">=7.0",
-        "guzzlehttp/guzzle": "~6.0",
-        "dusank/knapsack": "^10.0",
-        "jms/serializer": "^1.11",
-        "doctrine/cache": "^1.7",
-        "pimple/pimple": "^3.2",
-        "symfony/http-foundation": "~3,3||~4.0",
-        "predis/predis": "^1.1",
-        "openlss/lib-array2xml": "^0.5.1"
-    },
-    "autoload": {
-      "psr-4": {
-        "Zeevin\\Libiocm\\": "src/"
-      }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
+  "name": "zeevin/libiocm",
+  "description": "中国电信物联网开放平台API对接库",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/zeevin/libiocm",
+  "keywords": [
+    "iocm",
+    "中国电信北向API",
+    "OceanConnect",
+    "nb-iot",
+    "nbiot"
+  ],
+  "authors": [
+    {
+      "name": "CaoKang",
+      "email": "caokang@outlook.com",
+      "homepage": "https://www.init.lu"
     }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "~6.0",
+    "dusank/knapsack": "^10.0",
+    "jms/serializer": "^1.11",
+    "doctrine/cache": "^1.7",
+    "pimple/pimple": "^3.2",
+    "symfony/http-foundation": "~3,3||~4.0",
+    "predis/predis": "^1.1",
+    "openlss/lib-array2xml": "^0.5.1",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zeevin\\Libiocm\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
 }

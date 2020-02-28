@@ -60,9 +60,7 @@ Abstract class BaseClient
      */
     public function request($body = '')
     {
-//        echo $this->getUri();exit;
         $method = strtoupper($this->getMethod());
-//        echo $method;exit;
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -73,7 +71,7 @@ Abstract class BaseClient
                     'headers' => $this->getHeaders(),
                     'cert'    => [
                         $this->config['cert'],
-                        'IoM@1234',
+                        $this->config['cert_password'] ?? 'IoM@1234'
                     ],
                 ]
             );
@@ -293,10 +291,6 @@ Abstract class BaseClient
         return  'iocm/app';
     }
 
-
-
-
-
     protected function deserialize($data, $object, $format)
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
@@ -304,6 +298,4 @@ Abstract class BaseClient
 
         return $serializer->deserialize($data, $object, $format);
     }
-
-
 }

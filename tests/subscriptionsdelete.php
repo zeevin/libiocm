@@ -7,7 +7,7 @@
  * Source: subscriptionsdelete.php
  * Project: libiocm
  */
-require '../vendor/autoload.php';
+require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');

@@ -10,3 +10,4 @@
  */
 $raw_post_data = file_get_contents('php://input', 'r');
 file_put_contents('logs/'.date('Y-m-d').'.log',$raw_post_data."\n",FILE_APPEND);
+exit;
