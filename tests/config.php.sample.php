@@ -15,32 +15,33 @@ return [
         ],
     'iot'   =>
         [
-            'appId'  => 'arpcdre4vat8oDWlmDOmvaU23444',
-            'secret' => 'X7S_fDYnk5AFlN333kKWNHd44444',
-            'cert'   => __DIR__.DIRECTORY_SEPARATOR.'../cert/key.pem'
+            'appId'         => 'arpcdre4vat8oDWlmDOmvaU23444',
+            'secret'        => 'X7S_fDYnk5AFlN333kKWNHd44444',
+            'cert'          => __DIR__.DIRECTORY_SEPARATOR.'../cert/key.pem',
+            'cert_password' => 'IoM@1234',
         ],
     'cache' =>
         [
             //http://doctrine-orm.readthedocs.io/projects/doctrine-orm/en/latest/reference/caching.html
-            'default'  => 'file',
-            'oauth_key' => 'oauth_return',
+            'default'           => 'file',
+            'oauth_key'         => 'oauth_return',
             'oauth_refresh_key' => 'oauth_refresh',
-            'stores' => [
-                'file' => [
+            'stores'            => [
+                'file'      => [
                     'driver' => 'file',
-                    'patch' => __DIR__.DIRECTORY_SEPARATOR.'cache'
+                    'patch'  => __DIR__.DIRECTORY_SEPARATOR.'cache',
                 ],
                 'memcached' => [
                     'server' => '127.0.0.1',
-                    'port' => 11211
+                    'port'   => 11211,
                 ],
-                'redis' => [
-                    'driver' => 'predis',
-                    'host' => '127.0.0.1',
+                'redis'     => [
+                    'driver'   => 'predis',
+                    'host'     => '127.0.0.1',
                     'password' => null,
-                    'port' => 6379,
-                    'database'=> 0
-                ]
-            ]
+                    'port'     => 6379,
+                    'database' => 0,
+                ],
+            ],
         ],
 ];
