@@ -13,6 +13,11 @@ namespace Zeevin\Libiocm\Core;
 
 abstract class BaseRequestAttribute
 {
+    public function __toString()
+    {
+        return $this->serialize();
+    }
+
     public function serialize($format = 'json')
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
