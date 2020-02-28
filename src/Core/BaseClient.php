@@ -16,14 +16,12 @@ use LSS\Array2XML;
 
 Abstract class BaseClient
 {
-    protected $client = 'liboocm';
-    protected $httpClient;
+    protected $client = 'libiocm';
     protected $response;
     protected $result;
     protected $app;
     protected $id = null;
     protected $urlExtend = null;
-    protected $resourcePath ;
     protected $httpErrors = [];
     protected $config;
     /**
