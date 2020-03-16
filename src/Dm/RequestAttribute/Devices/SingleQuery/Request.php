@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午5:59
@@ -18,7 +19,8 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -26,7 +28,8 @@ class Request extends BaseRequestAttribute
     protected $appId;
     /**
      * 指定查询条件，可选值:imsi
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("select")
      * @JMS\Type("string")
@@ -49,6 +52,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -68,8 +72,7 @@ class Request extends BaseRequestAttribute
     public function setSelect($select)
     {
         $this->select = $select;
+
         return $this;
     }
-
-
 }

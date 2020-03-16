@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.saychain.net
+ *
  * @author Cao Kang(caokang@saychain.net)
  * Date: 2018/7/22
  * Time: 下午3:48
@@ -10,18 +11,17 @@
 
 namespace Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Query;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Create\Struct\DeviceCmd;
 use Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Create\Struct\DeviceReg;
 use Zeevin\Libiocm\Core\BaseResponseAttribute;
-use Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Create\Struct\TagDTO2;
 
 class Response extends BaseResponseAttribute
 {
     /**
-     * 批量任务id
+     * 批量任务id.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("taskId")
      * @JMS\Type("string")
@@ -29,13 +29,15 @@ class Response extends BaseResponseAttribute
     protected $taskId;
     /**
      * 批量任务名称。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("taskName")
      * @JMS\Type("string")
      */
     protected $taskName;
     /**
-     * 批量任务所归属的 appId
+     * 批量任务所归属的 appId.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -43,6 +45,7 @@ class Response extends BaseResponseAttribute
     protected $appId;
     /**
      * 下发该批量任务的操作员。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("operator")
      * @JMS\Type("string")
@@ -59,7 +62,8 @@ class Response extends BaseResponseAttribute
      */
     protected $taskFrom;
     /**
-     * 批量任务的类型，取值范围:DeviceReg/DeviceCmd
+     * 批量任务的类型，取值范围:DeviceReg/DeviceCmd.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("taskType")
      * @JMS\Type("string")
@@ -67,6 +71,7 @@ class Response extends BaseResponseAttribute
     protected $taskType;
     /**
      * 批量任务的状态，取值范围: Pending/Running/Complete/Timeout。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("status")
      * @JMS\Type("string")
@@ -74,20 +79,23 @@ class Response extends BaseResponseAttribute
     protected $status;
     /**
      * 批量任务的创建时间。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("startTime")
      * @JMS\Type("string")
      */
     protected $startTime;
     /**
-     * 批量任务的超时时间，单位秒
+     * 批量任务的超时时间，单位秒.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("timeout")
      * @JMS\Type("integer")
      */
     protected $timeout;
     /**
-     * 批量任务的进度，单位:千分比，范围:0-1000，向 下取整
+     * 批量任务的进度，单位:千分比，范围:0-1000，向 下取整.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("progress")
      * @JMS\Type("integer")
@@ -95,6 +103,7 @@ class Response extends BaseResponseAttribute
     protected $progress;
     /**
      * 任务的详情总数。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("totalCnt")
      * @JMS\Type("integer")
@@ -200,7 +209,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return string
      */
-    public function getStatus() :string
+    public function getStatus(): string
     {
         return $this->status;
     }
@@ -208,7 +217,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return string
      */
-    public function getStartTime() :string
+    public function getStartTime(): string
     {
         return $this->startTime;
     }
@@ -216,7 +225,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getTimeout() :int
+    public function getTimeout(): int
     {
         return $this->timeout;
     }
@@ -224,7 +233,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getProgress() :int
+    public function getProgress(): int
     {
         return $this->progress;
     }
@@ -232,7 +241,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getTotalCnt() :int
+    public function getTotalCnt(): int
     {
         return $this->totalCnt;
     }
@@ -240,7 +249,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getSuccessCnt() :int
+    public function getSuccessCnt(): int
     {
         return $this->successCnt;
     }
@@ -248,7 +257,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return mixed
      */
-    public function getFailCnt() :int
+    public function getFailCnt(): int
     {
         return $this->failCnt;
     }
@@ -256,7 +265,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getTimeoutCnt() :int
+    public function getTimeoutCnt(): int
     {
         return $this->timeoutCnt;
     }
@@ -264,7 +273,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getExpiredCnt() :int
+    public function getExpiredCnt(): int
     {
         return $this->expiredCnt;
     }
@@ -272,7 +281,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getCompleteCnt() :int
+    public function getCompleteCnt(): int
     {
         return $this->completeCnt;
     }
@@ -280,7 +289,7 @@ class Response extends BaseResponseAttribute
     /**
      * @return int
      */
-    public function getSuccessRate() :int
+    public function getSuccessRate(): int
     {
         return $this->successRate;
     }
@@ -305,7 +314,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->tags;
     }
-
-
-
 }

@@ -1,4 +1,5 @@
 <?php
+
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -13,8 +14,5 @@ $request->getBody()->setStatus('CANCELED');
 $app1 = $app['cmd.update'];
 //print_r($request->serialize());exit;
 /** @var \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Update\Response $ret */
-$ret =  $app1->setUrlExtend($deviceCommandId)->request()->getResult();
+$ret = $app1->setUrlExtend($deviceCommandId)->request()->getResult();
 print_r($ret);
-
-
-

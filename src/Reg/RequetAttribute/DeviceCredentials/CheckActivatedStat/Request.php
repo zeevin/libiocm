@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 上午10:35
@@ -18,7 +19,8 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -41,8 +43,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
-
-
 }

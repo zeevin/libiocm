@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午2:49
@@ -18,63 +19,56 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
      */
     protected $appId;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("gatewayId")
      * @JMS\Type("string")
      */
     protected $gatewayId;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("nodeType")
      * @JMS\Type("string")
      */
     protected $nodeType;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceType")
      * @JMS\Type("string")
      */
     protected $deviceType;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("status")
      * @JMS\Type("string")
      */
     protected $status;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("startTime")
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $startTime;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("endTime")
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
@@ -110,6 +104,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -129,6 +124,7 @@ class Request extends BaseRequestAttribute
     public function setGatewayId($gatewayId)
     {
         $this->gatewayId = $gatewayId;
+
         return $this;
     }
 
@@ -148,6 +144,7 @@ class Request extends BaseRequestAttribute
     public function setNodeType($nodeType)
     {
         $this->nodeType = $nodeType;
+
         return $this;
     }
 
@@ -167,6 +164,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
+
         return $this;
     }
 
@@ -186,6 +184,7 @@ class Request extends BaseRequestAttribute
     public function setPageNo($pageNo)
     {
         $this->pageNo = $pageNo;
+
         return $this;
     }
 
@@ -205,6 +204,7 @@ class Request extends BaseRequestAttribute
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
+
         return $this;
     }
 
@@ -224,6 +224,7 @@ class Request extends BaseRequestAttribute
     public function setStatus($status)
     {
         $this->status = $status;
+
         return $this;
     }
 
@@ -243,6 +244,7 @@ class Request extends BaseRequestAttribute
     public function setStartTime($startTime)
     {
         $this->startTime = $startTime;
+
         return $this;
     }
 
@@ -262,6 +264,7 @@ class Request extends BaseRequestAttribute
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -281,6 +284,7 @@ class Request extends BaseRequestAttribute
     public function setSort($sort)
     {
         $this->sort = $sort;
+
         return $this;
     }
 
@@ -300,9 +304,7 @@ class Request extends BaseRequestAttribute
     public function setSelect($select)
     {
         $this->select = $select;
+
         return $this;
     }
-
-
-
 }

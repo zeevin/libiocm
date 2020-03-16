@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午5:29
@@ -21,5 +22,4 @@ class ConnectionInfo
      * @JMS\Type("string")
      */
     protected $protocolType;
-
 }

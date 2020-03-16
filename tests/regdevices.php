@@ -1,13 +1,13 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/8
  * Time: 下午8:59
  * Source: regdevices.php
  * Project: libiocm
  */
-
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);

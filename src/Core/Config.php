@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午2:35
@@ -14,5 +15,4 @@ use DusanKasan\Knapsack\Collection;
 
 class Config extends Collection
 {
-
 }

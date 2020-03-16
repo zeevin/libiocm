@@ -1,4 +1,5 @@
 <?php
+
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -13,8 +14,5 @@ $request->getBody()->setDeviceId('2f41a999-3031-41bf-8aeb-a4d27eb9b547');
 $app1 = $app['cmd.createTask'];
 //print_r($request->serialize());exit;
 /** @var Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommandCancelTasks\CreateTask\Response $ret */
-$ret =  $app1->request($request->serialize())->getResult();
+$ret = $app1->request($request->serialize())->getResult();
 print_r($ret);
-
-
-

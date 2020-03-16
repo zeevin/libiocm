@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午7:19
@@ -23,7 +24,8 @@ class Request extends BaseRequestAttribute
      */
     protected $gatewayId;
     /**
-     * 应用唯一标识
+     * 应用唯一标识.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -35,6 +37,7 @@ class Request extends BaseRequestAttribute
      * @JMS\Type("string")
      */
     protected $deviceId;
+
     /**
      * @return mixed
      */
@@ -51,6 +54,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -70,6 +74,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -89,8 +94,7 @@ class Request extends BaseRequestAttribute
     public function setGatewayId($gatewayId)
     {
         $this->gatewayId = $gatewayId;
+
         return $this;
     }
-
-
 }

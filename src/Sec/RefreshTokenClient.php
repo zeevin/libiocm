@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/8
  * Time: 下午5:01
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Sec;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -49,5 +49,4 @@ class RefreshTokenClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午9:18
@@ -19,7 +20,8 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -27,7 +29,8 @@ class Request extends BaseRequestAttribute
     protected $appId;
     /**
      * 设备名称
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -35,7 +38,8 @@ class Request extends BaseRequestAttribute
     protected $name;
     /**
      * 终端用户，若设备为网关，则endUser可选；若设备是通过网关接入的，则endUser必须为null。
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("endUser")
      * @JMS\Type("string")
@@ -43,7 +47,8 @@ class Request extends BaseRequestAttribute
     protected $endUser;
     /**
      * 表示设备是否处于冻结状态，即是否上报数据（处于冻结状态，则不上报数据），取值有“TRUE”,“FALSE”
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("mute")
      * @JMS\Type("string")
@@ -51,7 +56,8 @@ class Request extends BaseRequestAttribute
     protected $mute;
     /**
      * 厂商ID
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("manufacturerId")
      * @JMS\Type("string")
@@ -59,7 +65,8 @@ class Request extends BaseRequestAttribute
     protected $manufacturerId;
     /**
      * 厂商名
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("manufacturerName")
      * @JMS\Type("string")
@@ -72,7 +79,8 @@ class Request extends BaseRequestAttribute
      * ContactSensor
      * Camera
      * Gateway
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceType")
      * @JMS\Type("string")
@@ -85,7 +93,8 @@ class Request extends BaseRequestAttribute
      * 16 进制： XXXX-XXXX 补0对齐
      * 如：001A-0A12
      * 其他协议再定
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("model")
      * @JMS\Type("string")
@@ -94,7 +103,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 设备的位置
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("location")
      * @JMS\Type("string")
@@ -103,7 +113,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 设备协议类型
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("protocolType")
      * @JMS\Type("string")
@@ -112,7 +123,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 设备配置信息，自定义结构体
-     * 可选
+     * 可选.
+     *
      * @var DeviceConfigDTO
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceConfig")
@@ -122,7 +134,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 设备所在地区
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("region")
      * @JMS\Type("string")
@@ -130,7 +143,8 @@ class Request extends BaseRequestAttribute
     protected $region;
     /**
      * 设备所属组织
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("organization")
      * @JMS\Type("string")
@@ -138,7 +152,8 @@ class Request extends BaseRequestAttribute
     protected $organization;
     /**
      * 设备所在时区
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("timezone")
      * @JMS\Type("string")
@@ -147,13 +162,13 @@ class Request extends BaseRequestAttribute
 
     /**
      * NB-IoT终端IMSI
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("imsi")
      * @JMS\Type("string")
      */
     protected $imsi;
-
 
     /**
      * @return mixed
@@ -171,6 +186,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -190,6 +206,7 @@ class Request extends BaseRequestAttribute
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -209,6 +226,7 @@ class Request extends BaseRequestAttribute
     public function setEndUser($endUser)
     {
         $this->endUser = $endUser;
+
         return $this;
     }
 
@@ -228,6 +246,7 @@ class Request extends BaseRequestAttribute
     public function setMute($mute)
     {
         $this->mute = $mute;
+
         return $this;
     }
 
@@ -247,6 +266,7 @@ class Request extends BaseRequestAttribute
     public function setManufacturerId($manufacturerId)
     {
         $this->manufacturerId = $manufacturerId;
+
         return $this;
     }
 
@@ -266,6 +286,7 @@ class Request extends BaseRequestAttribute
     public function setManufacturerName($manufacturerName)
     {
         $this->manufacturerName = $manufacturerName;
+
         return $this;
     }
 
@@ -285,6 +306,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
+
         return $this;
     }
 
@@ -304,6 +326,7 @@ class Request extends BaseRequestAttribute
     public function setModel($model)
     {
         $this->model = $model;
+
         return $this;
     }
 
@@ -323,6 +346,7 @@ class Request extends BaseRequestAttribute
     public function setLocation($location)
     {
         $this->location = $location;
+
         return $this;
     }
 
@@ -342,6 +366,7 @@ class Request extends BaseRequestAttribute
     public function setProtocolType($protocolType)
     {
         $this->protocolType = $protocolType;
+
         return $this;
     }
 
@@ -351,9 +376,9 @@ class Request extends BaseRequestAttribute
     public function getDeviceConfig(): DeviceConfigDTO
     {
         ($this->deviceConfig instanceof DeviceConfigDTO) || $this->deviceConfig = new  DeviceConfigDTO();
+
         return $this->deviceConfig;
     }
-
 
     /**
      * @return mixed
@@ -371,6 +396,7 @@ class Request extends BaseRequestAttribute
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 
@@ -390,6 +416,7 @@ class Request extends BaseRequestAttribute
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -409,6 +436,7 @@ class Request extends BaseRequestAttribute
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
+
         return $this;
     }
 
@@ -428,6 +456,7 @@ class Request extends BaseRequestAttribute
     public function setImsi($imsi)
     {
         $this->imsi = $imsi;
+
         return $this;
     }
 }

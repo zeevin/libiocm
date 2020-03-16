@@ -1,13 +1,13 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/25
  * Time: 下午3:22
  * Source: subscriptionsbatchdelete.php
  * Project: libiocm
  */
-
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);

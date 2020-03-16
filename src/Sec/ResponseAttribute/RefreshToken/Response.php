@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午8:42
@@ -63,7 +64,6 @@ class Response extends BaseResponseAttribute
         return $this->tokenType;
     }
 
-
     /**
      * @return mixed
      */
@@ -87,6 +87,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->refreshToken;
     }
-
-
 }

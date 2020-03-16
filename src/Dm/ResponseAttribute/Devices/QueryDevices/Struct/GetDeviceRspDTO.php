@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午3:14
@@ -10,8 +11,7 @@
 
 namespace Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct;
 
-
 class GetDeviceRspDTO
 {
-   use \Zeevin\Libiocm\Core\Traits\GetDeviceRspDTO;
+    use \Zeevin\Libiocm\Core\Traits\GetDeviceRspDTO;
 }

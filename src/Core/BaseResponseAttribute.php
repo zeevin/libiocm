@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午5:07
@@ -16,14 +17,16 @@ use JMS\Serializer\Annotation\SerializedName;
 class BaseResponseAttribute
 {
     /**
-     * 响应头信息statusCode
+     * 响应头信息statusCode.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("statusCode")
      * @JMS\Type("integer")
      */
     protected $statusCode;
     /**
-     * 响应头信息reasonPhrase
+     * 响应头信息reasonPhrase.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("reasonPhrase")
      * @JMS\Type("string")
@@ -32,7 +35,8 @@ class BaseResponseAttribute
 
     /**
      * body错误码
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("errorCode")
      * @JMS\Type("string")
@@ -40,13 +44,13 @@ class BaseResponseAttribute
     protected $errorCode;
     /**
      * body错误描述
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("errorDesc")
      * @JMS\Type("string")
      */
     protected $errorDesc;
-
 
     /**
      * @return mixed
@@ -80,18 +84,16 @@ class BaseResponseAttribute
         return $this->errorDesc;
     }
 
-
     public function serialize($format = 'json')
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
 
-        if ($format == 'form-url-encode')
-        {
-            $json = $serializer->serialize($this,'json');
-            return http_build_query(json_decode($json,true));
-        }
-        else
-            return $serializer->serialize($this, $format);
+        if ($format == 'form-url-encode') {
+            $json = $serializer->serialize($this, 'json');
 
+            return http_build_query(json_decode($json, true));
+        } else {
+            return $serializer->serialize($this, $format);
+        }
     }
 }

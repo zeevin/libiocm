@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午3:11
@@ -14,7 +15,7 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use LSS\Array2XML;
 
-Abstract class BaseClient
+abstract class BaseClient
 {
     protected $client = 'libiocm';
     protected $response;
@@ -26,7 +27,7 @@ Abstract class BaseClient
     protected $config;
     /**
      * 为了适配有些接口GET参数必须从url中代入，而不能从body中传入的问题，如1.2.3.1 按条件批量查询设备，此接口所有的参数
-     * 必须要求拼接到url中，真是个蛋疼的接口
+     * 必须要求拼接到url中，真是个蛋疼的接口.
      *
      * @var null
      */
@@ -36,12 +37,10 @@ Abstract class BaseClient
      */
     private $uri;
 
-
     public function __construct(ServiceContainer $app)
     {
         $this->app = $app;
         $this->config = $app['config']->get('iot');
-
     }
 
     public function getUri()
@@ -55,13 +54,14 @@ Abstract class BaseClient
     }
 
     /**
-     * @param  string  $body
+     * @param string $body
      *
      * @return $this
      */
     public function request($body = '')
     {
         $method = strtoupper($this->getMethod());
+
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -72,7 +72,7 @@ Abstract class BaseClient
                     'headers' => $this->getHeaders(),
                     'cert'    => [
                         $this->config['cert'],
-                        $this->config['cert_password'] ?? 'IoM@1234'
+                        $this->config['cert_password'] ?? 'IoM@1234',
                     ],
                 ]
             );
@@ -81,7 +81,7 @@ Abstract class BaseClient
                 'statusCode'   => $e->getCode(),
                 'reasonPhrase' => $e->getResponse()->getReasonPhrase(),
             ];
-            $message = (array)json_decode(
+            $message = (array) json_decode(
                 $e->getResponse()->getBody()->getContents()
             );
             $this->httpErrors = array_merge($this->httpErrors, $message);
@@ -104,17 +104,15 @@ Abstract class BaseClient
     {
         if (empty($this->httpErrors)) {
             $body_array = json_decode(
-                (string)$this->response->getBody(),
+                (string) $this->response->getBody(),
                 true
             );
 
             $body_array['statusCode'] = $this->response->getStatusCode();
             $body_array['reasonPhrase'] = $this->response->getReasonPhrase();
-
-
-        }
-        else
+        } else {
             $body_array = $this->httpErrors;
+        }
 
         if (isset($body_array['error_desc'])) {
             $body_array['errorDesc'] = $body_array['error_desc'];
@@ -125,9 +123,7 @@ Abstract class BaseClient
             unset($body_array['error_code']);
         }
 
-
         $body = json_encode($body_array);
-
 
         if ($format == 'json' || $format == 'text') {
             $this->result = $body;
@@ -179,9 +175,7 @@ Abstract class BaseClient
         $iotConfig = $app['config']->get('iot');
 
         if ($ret = $cache->fetch($cacheConfig['oauth_key'])) {
-
-        }
-        else {
+        } else {
             $request = new \Zeevin\Libiocm\Sec\RequestAttribute\Login\Request();
             $request->setAppId($iotConfig['appId'])->setSecret(
                 $iotConfig['secret']
@@ -206,7 +200,7 @@ Abstract class BaseClient
     }
 
     /**
-     * 获取appId
+     * 获取appId.
      *
      * @return mixed
      */
@@ -285,7 +279,7 @@ Abstract class BaseClient
     protected function deserialize($data, $object, $format)
     {
         $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
-        $object = class_exists($object)?$object:BaseResponseAttribute::class;
+        $object = class_exists($object) ? $object : BaseResponseAttribute::class;
 
         return $serializer->deserialize($data, $object, $format);
     }

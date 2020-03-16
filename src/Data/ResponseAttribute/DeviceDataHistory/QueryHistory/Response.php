@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午5:56
@@ -17,21 +18,18 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 class Response extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("totalCount")
      * @JMS\Type("integer")
      */
     protected $totalCount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
@@ -75,6 +73,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->list;
     }
-
-
 }

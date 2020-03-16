@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午9:20
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Dm;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -29,6 +29,7 @@ class UpdateDeviceClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */
@@ -52,5 +53,4 @@ class UpdateDeviceClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午9:46
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Dm;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -29,6 +29,7 @@ class SpecificMemberDeleteClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */
@@ -52,7 +53,8 @@ class SpecificMemberDeleteClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-    public function getUrlExtend() :string
+
+    public function getUrlExtend(): string
     {
         return '/deleteDevGroupTagFromDevices';
     }

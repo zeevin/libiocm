@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午4:06
@@ -18,7 +19,8 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -27,7 +29,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 仅在设备是网关，且连接了传感器时有效。取值null或者true删除网关及其下属设备；取值false时删除网关，并将下属传感器属性变为网关属性
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("cascade")
      * @JMS\Type("string")
@@ -50,6 +53,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -69,8 +73,7 @@ class Request extends BaseRequestAttribute
     public function setCascade($cascade)
     {
         $this->cascade = $cascade;
+
         return $this;
     }
-
-
 }

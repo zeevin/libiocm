@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/6/29
  * Time: 下午6:11
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Core\Traits;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 
@@ -18,7 +18,8 @@ trait CommandDTOV2
 {
     /**
      * 命令对应的服务 ID，要与 profile 中定义 的 serviceId 保持一致。
-     * 必选
+     * 必选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("serviceId")
      * @JMS\Type("string")
@@ -53,6 +54,7 @@ trait CommandDTOV2
     public function setServiceId($serviceId)
     {
         $this->serviceId = $serviceId;
+
         return $this;
     }
 
@@ -72,6 +74,7 @@ trait CommandDTOV2
     public function setMethod($method)
     {
         $this->method = $method;
+
         return $this;
     }
 
@@ -91,8 +94,7 @@ trait CommandDTOV2
     public function setParas($paras)
     {
         $this->paras = $paras;
+
         return $this;
     }
-
-
 }

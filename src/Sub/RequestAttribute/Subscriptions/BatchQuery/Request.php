@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.saychain.net
+ *
  * @author Cao Kang(caokang@saychain.net)
  * Date: 2018/7/22
  * Time: 下午11:50
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Sub\RequestAttribute\Subscriptions\BatchQuery;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
@@ -19,6 +19,7 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 设备所属的 appId。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -40,7 +41,8 @@ class Request extends BaseRequestAttribute
      * 化)
      * 10. ruleEvent(规则事件)
      * 11. deviceModelAdded(添加设备模型)
-     * 12. deviceModelDeleted(删除设备模 型)
+     * 12. deviceModelDeleted(删除设备模 型).
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("notifyType")
      * @JMS\Type("string")
@@ -75,6 +77,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -94,13 +97,14 @@ class Request extends BaseRequestAttribute
     public function setNotifyType($notifyType)
     {
         $this->notifyType = $notifyType;
+
         return $this;
     }
 
     /**
      * @return int
      */
-    public function getPageNo() :int
+    public function getPageNo(): int
     {
         return $this->pageNo;
     }
@@ -113,13 +117,14 @@ class Request extends BaseRequestAttribute
     public function setPageNo(int $pageNo)
     {
         $this->pageNo = $pageNo;
+
         return $this;
     }
 
     /**
      * @return int
      */
-    public function getPageSize() :int
+    public function getPageSize(): int
     {
         return $this->pageSize;
     }
@@ -132,8 +137,7 @@ class Request extends BaseRequestAttribute
     public function setPageSize(int $pageSize)
     {
         $this->pageSize = $pageSize;
+
         return $this;
     }
-
-
 }
