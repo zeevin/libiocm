@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.saychain.net
+ *
  * @author Cao Kang(caokang@saychain.net)
  * Date: 2018/7/22
  * Time: 下午3:44
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\BatchTask;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -29,6 +29,7 @@ class QueryDetailClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */

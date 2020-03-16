@@ -1,4 +1,5 @@
 <?php
+
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -12,8 +13,5 @@ $request->setAppId($iotConfig['appId'])->setStartTime(new DateTime('20180401'))-
 $app1 = $app['cmd.query'];
 //print_r($request->serialize());exit;
 /** @var \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Response $ret */
-$ret =  $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$ret = $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
-
-
-

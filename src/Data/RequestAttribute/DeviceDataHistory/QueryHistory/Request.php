@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午5:50
@@ -17,7 +18,8 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 应用唯一标识
+     * 应用唯一标识.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -48,14 +50,12 @@ class Request extends BaseRequestAttribute
      */
     protected $property;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
@@ -90,6 +90,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -109,6 +110,7 @@ class Request extends BaseRequestAttribute
     public function setGatewayId($gatewayId)
     {
         $this->gatewayId = $gatewayId;
+
         return $this;
     }
 
@@ -128,6 +130,7 @@ class Request extends BaseRequestAttribute
     public function setServiceId($serviceId)
     {
         $this->serviceId = $serviceId;
+
         return $this;
     }
 
@@ -147,6 +150,7 @@ class Request extends BaseRequestAttribute
     public function setProperty($property)
     {
         $this->property = $property;
+
         return $this;
     }
 
@@ -166,6 +170,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -185,6 +190,7 @@ class Request extends BaseRequestAttribute
     public function setPageNo($pageNo)
     {
         $this->pageNo = $pageNo;
+
         return $this;
     }
 
@@ -204,6 +210,7 @@ class Request extends BaseRequestAttribute
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
+
         return $this;
     }
 
@@ -223,6 +230,7 @@ class Request extends BaseRequestAttribute
     public function setStartTime($startTime)
     {
         $this->startTime = $startTime;
+
         return $this;
     }
 
@@ -242,9 +250,7 @@ class Request extends BaseRequestAttribute
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
-
-
-
 }

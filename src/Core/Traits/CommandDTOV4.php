@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午9:22
@@ -50,6 +51,7 @@ trait CommandDTOV4
     public function setServiceId($serviceId)
     {
         $this->serviceId = $serviceId;
+
         return $this;
     }
 
@@ -69,6 +71,7 @@ trait CommandDTOV4
     public function setMethod($method)
     {
         $this->method = $method;
+
         return $this;
     }
 
@@ -88,10 +91,7 @@ trait CommandDTOV4
     public function setParas($paras)
     {
         $this->paras = $paras;
+
         return $this;
     }
-
-
-
-
 }

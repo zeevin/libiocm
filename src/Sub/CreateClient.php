@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 上午11:55
@@ -28,6 +29,7 @@ class CreateClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */

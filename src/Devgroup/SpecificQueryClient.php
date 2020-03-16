@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午9:00
@@ -10,11 +11,10 @@
 
 namespace Zeevin\Libiocm\Devgroup;
 
-
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
-class SpecificQueryClient  extends BaseClient implements ClientInterface
+class SpecificQueryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.3.0';
     protected $domain = 'devgroup';
@@ -29,6 +29,7 @@ class SpecificQueryClient  extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 上午11:49
@@ -16,16 +17,17 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 
 class Request extends BaseRequestAttribute
 {
-
     /**
-     * 通知类型
+     * 通知类型.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("notifyType")
      * @JMS\Type("string")
      */
     protected $notifyType;
     /**
-     * 回调的url
+     * 回调的url.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("callbackUrl")
      * @JMS\Type("string")
@@ -34,6 +36,7 @@ class Request extends BaseRequestAttribute
 
     /**
      * 设备所属的 appId。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -56,6 +59,7 @@ class Request extends BaseRequestAttribute
     public function setNotifyType($notifyType)
     {
         $this->notifyType = $notifyType;
+
         return $this;
     }
 
@@ -75,6 +79,7 @@ class Request extends BaseRequestAttribute
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
+
         return $this;
     }
 
@@ -94,8 +99,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
-
-
 }

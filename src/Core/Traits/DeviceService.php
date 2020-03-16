@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午6:47
@@ -45,5 +46,4 @@ trait DeviceService
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $eventTime;
-
 }

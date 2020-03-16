@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午3:17
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Sec;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -49,6 +49,4 @@ class LoginClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
-
 }

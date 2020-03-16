@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 上午11:30
@@ -28,6 +29,7 @@ class QueryClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */
@@ -51,5 +53,4 @@ class QueryClient extends BaseClient implements ClientInterface
     {
         return $this->method;
     }
-
 }

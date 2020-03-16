@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 上午11:29
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct;
-
 
 class DeviceCommandResp
 {

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 上午11:18
@@ -34,8 +35,7 @@ trait DeviceCommandQueryResp
      * @return \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\Pagination
      */
     public function getPagination(
-    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\Pagination
-    {
+    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\Pagination {
         return $this->pagination;
     }
 
@@ -43,10 +43,7 @@ trait DeviceCommandQueryResp
      * @return \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp
      */
     public function getData(
-    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp
-    {
+    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp {
         return $this->data;
     }
-
-
 }

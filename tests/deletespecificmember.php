@@ -1,13 +1,13 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午7:14
  * Source: deletespecificmember.php
  * Project: libiocm
  */
-
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -21,5 +21,5 @@ $app1 = $app['dm.delete.devgroup.specific.member'];
 $accessAppId = 'xxxx';
 //print_r($request->serialize());exit;
 /** @var Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberDelete\Response $ret */
-$ret =  $app1->request($request->serialize())->getResult('json');
+$ret = $app1->request($request->serialize())->getResult('json');
 print_r($ret);

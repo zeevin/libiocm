@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/25
  * Time: 下午3:17
@@ -9,7 +10,6 @@
  */
 
 namespace Zeevin\Libiocm\Sub;
-
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
@@ -29,6 +29,7 @@ class BatchDeleteClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */

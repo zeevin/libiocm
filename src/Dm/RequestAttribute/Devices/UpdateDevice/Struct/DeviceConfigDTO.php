@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午9:58
@@ -16,7 +17,8 @@ use JMS\Serializer\Annotation\SerializedName;
 class DeviceConfigDTO
 {
     /**
-     * 数据配置信息，自定义结构体
+     * 数据配置信息，自定义结构体.
+     *
      * @var DataConfigDTO
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("dataConfig")
@@ -30,7 +32,7 @@ class DeviceConfigDTO
     public function getDataConfig(): DataConfigDTO
     {
         ($this->dataConfig instanceof DataConfigDTO) || $this->dataConfig = new DataConfigDTO();
+
         return $this->dataConfig;
     }
-
 }

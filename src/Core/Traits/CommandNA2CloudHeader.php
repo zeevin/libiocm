@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 下午4:15
@@ -19,7 +20,8 @@ trait CommandNA2CloudHeader
      * 如果填写该requestId，就是用填写的requestId标识一个命令，这里的requestId不能重复，
      * 由发起端APP按照下面的规则保证其唯一性：Generate seqNum：APP生成序列号seqNum，在POST请求BODY中携带，
      * 序列号规则采用：UUID_XXXX，UUID会根据JAVA自带算法生成，每次APP启动后生成一个新的值，后续使用时不变，
-     * 直到下次APP重新启动再生成一个新的UUID值，XXXX的取值范围：0001-9999，达到9999后重新从0001开始，如此循环
+     * 直到下次APP重新启动再生成一个新的UUID值，XXXX的取值范围：0001-9999，达到9999后重新从0001开始，如此循环.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("requestId")
      * @JMS\Type("string")
@@ -78,6 +80,7 @@ trait CommandNA2CloudHeader
     public function setRequestId($requestId)
     {
         $this->requestId = $requestId;
+
         return $this;
     }
 
@@ -97,6 +100,7 @@ trait CommandNA2CloudHeader
     public function setMode($mode)
     {
         $this->mode = $mode;
+
         return $this;
     }
 
@@ -116,6 +120,7 @@ trait CommandNA2CloudHeader
     public function setFrom($from)
     {
         $this->from = $from;
+
         return $this;
     }
 
@@ -135,6 +140,7 @@ trait CommandNA2CloudHeader
     public function setToType($toType)
     {
         $this->toType = $toType;
+
         return $this;
     }
 
@@ -154,6 +160,7 @@ trait CommandNA2CloudHeader
     public function setTo($to)
     {
         $this->to = $to;
+
         return $this;
     }
 
@@ -173,6 +180,7 @@ trait CommandNA2CloudHeader
     public function setMethod($method)
     {
         $this->method = $method;
+
         return $this;
     }
 
@@ -192,9 +200,7 @@ trait CommandNA2CloudHeader
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
+
         return $this;
     }
-
-
-
 }

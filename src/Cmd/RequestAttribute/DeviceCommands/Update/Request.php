@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 上午11:53
@@ -75,9 +76,7 @@ class Request extends BaseRequestAttribute
     public function getBody()
     {
         ($this->body instanceof UpdateDeviceCommandReq) || $this->body = new UpdateDeviceCommandReq();
+
         return $this->body;
     }
-
-
-
 }

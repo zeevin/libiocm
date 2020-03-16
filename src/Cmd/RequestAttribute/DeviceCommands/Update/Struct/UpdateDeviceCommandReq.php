@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 下午1:54
@@ -37,6 +38,4 @@ class UpdateDeviceCommandReq
     {
         $this->status = $status;
     }
-
-
 }

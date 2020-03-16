@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午5:16
@@ -14,6 +15,4 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 
 class Response extends BaseResponseAttribute
 {
-
-
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午8:20
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Devgroup\RequestAttribute\DevGroups\Query;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
@@ -18,7 +18,8 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 写授权应用的应用 ID
+     * 写授权应用的应用 ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("accessAppId")
      * @JMS\Type("string")
@@ -27,21 +28,24 @@ class Request extends BaseRequestAttribute
     /**
      * 分页查询参数。
      *  值为空时，查询内容不分页。
-     *  值为大于等于0的整数时，分页查询。  值为0时查询第一页
+     *  值为大于等于0的整数时，分页查询。  值为0时查询第一页.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
     /**
-     * 每页设备组记录数量，默认值为 1
+     * 每页设备组记录数量，默认值为 1.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
     /**
-     * 设备组名称
+     * 设备组名称.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -64,6 +68,7 @@ class Request extends BaseRequestAttribute
     public function setAccessAppId($accessAppId)
     {
         $this->accessAppId = $accessAppId;
+
         return $this;
     }
 
@@ -83,6 +88,7 @@ class Request extends BaseRequestAttribute
     public function setPageNo($pageNo)
     {
         $this->pageNo = $pageNo;
+
         return $this;
     }
 
@@ -102,6 +108,7 @@ class Request extends BaseRequestAttribute
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
+
         return $this;
     }
 
@@ -121,8 +128,7 @@ class Request extends BaseRequestAttribute
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
-
-
 }

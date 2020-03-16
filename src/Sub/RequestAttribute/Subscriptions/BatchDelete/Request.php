@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/25
  * Time: 下午3:16
@@ -10,16 +11,15 @@
 
 namespace Zeevin\Libiocm\Sub\RequestAttribute\Subscriptions\BatchDelete;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
 
 class Request extends BaseRequestAttribute
 {
-
     /**
-     * 用户名，应填写应用程序ID
+     * 用户名，应填写应用程序ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -39,7 +39,8 @@ class Request extends BaseRequestAttribute
      * 9. serviceInfoChanged(服务信息变化)
      * 10. ruleEvent(规则事件)
      * 11. deviceModelAdded(添加设备模型)
-     * 12. deviceModelDeleted(删除设备模型)
+     * 12. deviceModelDeleted(删除设备模型).
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("notifyType")
      * @JMS\Type("string")
@@ -47,6 +48,7 @@ class Request extends BaseRequestAttribute
     protected $notifyType;
     /**
      * 订阅回调的 URL 地址。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("callbackUrl")
      * @JMS\Type("string")
@@ -69,6 +71,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -88,6 +91,7 @@ class Request extends BaseRequestAttribute
     public function setNotifyType($notifyType)
     {
         $this->notifyType = $notifyType;
+
         return $this;
     }
 
@@ -107,8 +111,7 @@ class Request extends BaseRequestAttribute
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
+
         return $this;
     }
-
-
 }

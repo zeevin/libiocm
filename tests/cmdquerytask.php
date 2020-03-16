@@ -1,4 +1,5 @@
 <?php
+
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -13,8 +14,5 @@ $request->setDeviceId('2f41a999-3031-41bf-8aeb-a4d27eb9b547');
 $app1 = $app['cmd.queryTask'];
 //print_r($request->serialize());exit;
 /** @var \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommandCancelTasks\QueryTask\Response $ret */
-$ret =  $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$ret = $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
-
-
-
