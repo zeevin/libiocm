@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午5:58
@@ -34,14 +35,16 @@ class DeviceDataHistoryDTO
      */
     protected $gatewayId;
     /**
-     * 应用唯一标识
+     * 应用唯一标识.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
      */
     protected $appId;
     /**
-     * 应用唯一标识
+     * 应用唯一标识.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("data")
      * @JMS\Type("array")

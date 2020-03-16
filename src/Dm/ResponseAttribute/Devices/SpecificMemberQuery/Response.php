@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午9:16
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberQuery;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseResponseAttribute;
@@ -19,7 +19,8 @@ use Zeevin\Libiocm\Devgroup\ResponseAttribute\DevGroups\Query\Struct\QueryDevGro
 class Response extends BaseResponseAttribute
 {
     /**
-     * 设备组总数
+     * 设备组总数.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("totalCount")
      * @JMS\Type("integer")
@@ -27,6 +28,7 @@ class Response extends BaseResponseAttribute
     protected $totalCount;
     /**
      * 查询结果页码
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
@@ -34,7 +36,8 @@ class Response extends BaseResponseAttribute
     protected $pageNo;
 
     /**
-     * 每页设备组记录数量
+     * 每页设备组记录数量.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
@@ -43,7 +46,7 @@ class Response extends BaseResponseAttribute
 
     /**
      * @var QueryDevGroupDTOCloud2NA
-     * 设备组信息详情，具体参见
+     *                               设备组信息详情，具体参见
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceIds")
      * @JMS\Type("array<string>")
@@ -81,5 +84,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->list;
     }
-
 }

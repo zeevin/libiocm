@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.saychain.net
+ *
  * @author Cao Kang(caokang@saychain.net)
  * Date: 2018/7/23
  * Time: 上午12:44
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Sub\RequestAttribute\Subscriptions\Delete;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
@@ -18,14 +18,16 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 订阅ID号
+     * 订阅ID号.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("subscriptionId")
      * @JMS\Type("string")
      */
     protected $subscriptionId;
     /**
-     * 用户名，应填写应用程序ID
+     * 用户名，应填写应用程序ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -48,6 +50,7 @@ class Request extends BaseRequestAttribute
     public function setSubscriptionId($subscriptionId)
     {
         $this->subscriptionId = $subscriptionId;
+
         return $this;
     }
 
@@ -67,8 +70,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
-
-
 }

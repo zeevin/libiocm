@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午3:17
@@ -154,8 +155,6 @@ class DeviceInfo
      * @JMS\Type("string")
      */
     protected $batteryLevel;
-
-
 
     /**
      * @return mixed
@@ -332,7 +331,4 @@ class DeviceInfo
     {
         return $this->mute;
     }
-
-
-
 }

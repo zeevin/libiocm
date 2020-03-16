@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/6/29
  * Time: 下午12:00
@@ -17,7 +18,6 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 class Response extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("taskID")
      * @JMS\Type("string")
@@ -31,7 +31,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->taskID;
     }
-
-
-
 }

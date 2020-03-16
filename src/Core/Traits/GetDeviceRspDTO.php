@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午6:43
@@ -59,7 +60,6 @@ trait GetDeviceRspDTO
      */
     protected $services;
 
-
     /**
      * @return mixed
      */
@@ -115,8 +115,4 @@ trait GetDeviceRspDTO
     {
         return $this->services;
     }
-
-
 }
-
-

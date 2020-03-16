@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/6/29
  * Time: 下午5:11
@@ -16,7 +17,8 @@ use JMS\Serializer\Annotation\SerializedName;
 class DeviceReg
 {
     /**
-     * 文件上传时返回的文件ID
+     * 文件上传时返回的文件ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("fileId")
      * @JMS\Type("string")
@@ -39,8 +41,7 @@ class DeviceReg
     public function setFileId($fileId)
     {
         $this->fileId = $fileId;
+
         return $this;
     }
-
-
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/16
  * Time: 下午3:09
@@ -17,28 +18,24 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 class Response extends BaseResponseAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("totalCount")
      * @JMS\Type("integer")
      */
     protected $totalCount;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("devices")
      * @JMS\Type("array<Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Struct\GetDeviceRspDTO>")
@@ -76,8 +73,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->devices;
     }
-
-
-
-
 }

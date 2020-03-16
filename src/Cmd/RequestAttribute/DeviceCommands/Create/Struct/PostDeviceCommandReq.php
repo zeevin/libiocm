@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午8:53
@@ -63,6 +64,7 @@ class PostDeviceCommandReq
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -72,6 +74,7 @@ class PostDeviceCommandReq
     public function getCommand(): CommandDTOV4
     {
         $this->command instanceof CommandDTOV4 || $this->command = new CommandDTOV4();
+
         return $this->command;
     }
 
@@ -91,6 +94,7 @@ class PostDeviceCommandReq
     public function setCallbackUrl($callbackUrl)
     {
         $this->callbackUrl = $callbackUrl;
+
         return $this;
     }
 
@@ -110,6 +114,7 @@ class PostDeviceCommandReq
     public function setExpireTime($expireTime)
     {
         $this->expireTime = $expireTime;
+
         return $this;
     }
 
@@ -129,10 +134,7 @@ class PostDeviceCommandReq
     public function setMaxRetransmit($maxRetransmit)
     {
         $this->maxRetransmit = $maxRetransmit;
+
         return $this;
     }
-
-
-
-
 }

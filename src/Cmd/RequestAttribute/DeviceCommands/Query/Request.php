@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 上午9:42
@@ -17,35 +18,30 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageNo")
      * @JMS\Type("integer")
      */
     protected $pageNo;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("pageSize")
      * @JMS\Type("integer")
      */
     protected $pageSize;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceId")
      * @JMS\Type("string")
      */
     protected $deviceId;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("startTime")
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
      */
     protected $startTime;
     /**
-     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("endTime")
      * @JMS\Type("DateTime<'Ymd\THis\Z'>")
@@ -54,7 +50,8 @@ class Request extends BaseRequestAttribute
 
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -77,6 +74,7 @@ class Request extends BaseRequestAttribute
     public function setPageNo($pageNo)
     {
         $this->pageNo = $pageNo;
+
         return $this;
     }
 
@@ -96,6 +94,7 @@ class Request extends BaseRequestAttribute
     public function setPageSize($pageSize)
     {
         $this->pageSize = $pageSize;
+
         return $this;
     }
 
@@ -115,6 +114,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceId($deviceId)
     {
         $this->deviceId = $deviceId;
+
         return $this;
     }
 
@@ -134,6 +134,7 @@ class Request extends BaseRequestAttribute
     public function setStartTime($startTime)
     {
         $this->startTime = $startTime;
+
         return $this;
     }
 
@@ -153,6 +154,7 @@ class Request extends BaseRequestAttribute
     public function setEndTime($endTime)
     {
         $this->endTime = $endTime;
+
         return $this;
     }
 
@@ -172,8 +174,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
-
-
 }

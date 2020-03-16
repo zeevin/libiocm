@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/8
  * Time: 下午4:16
@@ -17,7 +18,8 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 用户名，应填写应用程序ID
+     * 用户名，应填写应用程序ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -25,13 +27,15 @@ class Request extends BaseRequestAttribute
     protected $appId;
     /**
      * 登录用户口令，填写应用程序密码
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("secret")
      * @JMS\Type("string")
      */
     protected $secret;
     /**
-     * 刷新令牌，用于获取一个新的accessToken
+     * 刷新令牌，用于获取一个新的accessToken.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("refreshToken")
      * @JMS\Type("string")
@@ -70,6 +74,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -81,6 +86,7 @@ class Request extends BaseRequestAttribute
     public function setSecret($secret)
     {
         $this->secret = $secret;
+
         return $this;
     }
 
@@ -92,6 +98,7 @@ class Request extends BaseRequestAttribute
     public function setRefreshToken($refreshToken)
     {
         $this->refreshToken = $refreshToken;
+
         return $this;
     }
 }

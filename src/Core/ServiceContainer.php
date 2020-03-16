@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/7
  * Time: 下午2:30
@@ -15,9 +16,7 @@ use Pimple\Container;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Class ServiceContainer
- *
- * @package Zeevin\Libiocm\Core
+ * Class ServiceContainer.
  */
 class ServiceContainer extends Container
 {
@@ -54,11 +53,11 @@ class ServiceContainer extends Container
             ->registerProviders()
             ->registerRequest()
             ->registerHttpClient();
-
     }
 
     /**
      * @see \GuzzleHttp\Client __construct
+     *
      * @return $this
      */
     protected function registerHttpClient()
@@ -89,7 +88,7 @@ class ServiceContainer extends Container
     protected function registerProviders()
     {
         foreach ($this->providers as $provider) {
-            $this->register(new $provider);
+            $this->register(new $provider());
         }
 
         return $this;
@@ -114,5 +113,4 @@ class ServiceContainer extends Container
 
         return $this;
     }
-
 }

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午9:36
@@ -17,7 +18,8 @@ class UpdateDeviceInfoReqDTO
 {
     /**
      * 设备名称
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -25,7 +27,8 @@ class UpdateDeviceInfoReqDTO
     protected $name;
     /**
      * 终端用户，若设备为网关，则endUser可选；若设备是通过网关接入的，则endUser必须为null。
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("endUser")
      * @JMS\Type("string")
@@ -33,7 +36,8 @@ class UpdateDeviceInfoReqDTO
     protected $endUser;
     /**
      * 表示设备是否处于冻结状态，即是否上报数据（处于冻结状态，则不上报数据），取值有“TRUE”,“FALSE”
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("mute")
      * @JMS\Type("string")
@@ -41,7 +45,8 @@ class UpdateDeviceInfoReqDTO
     protected $mute;
     /**
      * 厂商ID
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("manufacturerId")
      * @JMS\Type("string")
@@ -49,7 +54,8 @@ class UpdateDeviceInfoReqDTO
     protected $manufacturerId;
     /**
      * 厂商名
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("manufacturerName")
      * @JMS\Type("string")
@@ -57,7 +63,8 @@ class UpdateDeviceInfoReqDTO
     protected $manufacturerName;
     /**
      * 设备的位置
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("location")
      * @JMS\Type("string")
@@ -69,7 +76,8 @@ class UpdateDeviceInfoReqDTO
      * ContactSensor
      * Camera
      * Gateway
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceType")
      * @JMS\Type("string")
@@ -81,7 +89,8 @@ class UpdateDeviceInfoReqDTO
      * 16 进制： XXXX-XXXX 补0对齐
      * 如：001A-0A12
      * 其他协议再定
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("model")
      * @JMS\Type("string")
@@ -89,7 +98,8 @@ class UpdateDeviceInfoReqDTO
     protected $model;
     /**
      * 设备协议类型
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("protocolType")
      * @JMS\Type("string")
@@ -97,7 +107,8 @@ class UpdateDeviceInfoReqDTO
     protected $protocolType;
     /**
      * 设备配置信息，自定义结构体
-     * 可选
+     * 可选.
+     *
      * @var DeviceConfigDTO
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceConfig")
@@ -106,7 +117,8 @@ class UpdateDeviceInfoReqDTO
     protected $deviceConfig;
     /**
      * 设备所在地区
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -114,7 +126,8 @@ class UpdateDeviceInfoReqDTO
     protected $region;
     /**
      * 设备所属组织
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -122,7 +135,8 @@ class UpdateDeviceInfoReqDTO
     protected $organization;
     /**
      * 设备所在时区
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("name")
      * @JMS\Type("string")
@@ -145,6 +159,7 @@ class UpdateDeviceInfoReqDTO
     public function setName($name)
     {
         $this->name = $name;
+
         return $this;
     }
 
@@ -164,6 +179,7 @@ class UpdateDeviceInfoReqDTO
     public function setEndUser($endUser)
     {
         $this->endUser = $endUser;
+
         return $this;
     }
 
@@ -183,6 +199,7 @@ class UpdateDeviceInfoReqDTO
     public function setMute($mute)
     {
         $this->mute = $mute;
+
         return $this;
     }
 
@@ -202,6 +219,7 @@ class UpdateDeviceInfoReqDTO
     public function setManufacturerId($manufacturerId)
     {
         $this->manufacturerId = $manufacturerId;
+
         return $this;
     }
 
@@ -221,6 +239,7 @@ class UpdateDeviceInfoReqDTO
     public function setManufacturerName($manufacturerName)
     {
         $this->manufacturerName = $manufacturerName;
+
         return $this;
     }
 
@@ -240,6 +259,7 @@ class UpdateDeviceInfoReqDTO
     public function setLocation($location)
     {
         $this->location = $location;
+
         return $this;
     }
 
@@ -259,6 +279,7 @@ class UpdateDeviceInfoReqDTO
     public function setDeviceType($deviceType)
     {
         $this->deviceType = $deviceType;
+
         return $this;
     }
 
@@ -278,6 +299,7 @@ class UpdateDeviceInfoReqDTO
     public function setModel($model)
     {
         $this->model = $model;
+
         return $this;
     }
 
@@ -297,6 +319,7 @@ class UpdateDeviceInfoReqDTO
     public function setProtocolType($protocolType)
     {
         $this->protocolType = $protocolType;
+
         return $this;
     }
 
@@ -306,6 +329,7 @@ class UpdateDeviceInfoReqDTO
     public function getDeviceConfig(): DeviceConfigDTO
     {
         ($this->deviceConfig instanceof DeviceConfigDTO) || ($this->deviceConfig = new DeviceConfigDTO());
+
         return $this->deviceConfig;
     }
 
@@ -325,6 +349,7 @@ class UpdateDeviceInfoReqDTO
     public function setRegion($region)
     {
         $this->region = $region;
+
         return $this;
     }
 
@@ -344,6 +369,7 @@ class UpdateDeviceInfoReqDTO
     public function setOrganization($organization)
     {
         $this->organization = $organization;
+
         return $this;
     }
 
@@ -363,8 +389,7 @@ class UpdateDeviceInfoReqDTO
     public function setTimezone($timezone)
     {
         $this->timezone = $timezone;
+
         return $this;
     }
-
-
 }

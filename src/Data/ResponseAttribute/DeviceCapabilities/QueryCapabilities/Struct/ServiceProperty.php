@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/17
  * Time: 下午7:38
@@ -155,7 +156,4 @@ class ServiceProperty
     {
         return $this->enumList;
     }
-
-
-
 }

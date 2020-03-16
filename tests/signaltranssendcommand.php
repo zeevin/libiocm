@@ -1,13 +1,13 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 下午5:21
  * Source: signaltranssendcommand.php
  * Project: libiocm
  */
-
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -36,4 +36,3 @@ $ret = $app1->setUrlExtend(
     $request->serialize()
 )->getResult();
 print_r($ret);
-

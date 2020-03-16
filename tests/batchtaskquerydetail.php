@@ -1,13 +1,13 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/16
  * Time: 下午7:54
  * Source: batchtaskcreate.php
  * Project: libiocm
  */
-
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
@@ -22,8 +22,6 @@ $request->setAppId($iotConfig['appId'])->setTaskId($taskId);
 /** @var \Zeevin\Libiocm\BatchTask\QueryDetailClient $app */
 $app = $app['batchtask.query.detail'];
 
-$ret =  $app->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$ret = $app->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 
 print_r($ret);
-
-

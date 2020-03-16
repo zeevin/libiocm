@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 下午2:23
@@ -19,7 +20,8 @@ class Request extends BaseRequestAttribute
 {
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -50,6 +52,7 @@ class Request extends BaseRequestAttribute
     public function setAppId($appId)
     {
         $this->appId = $appId;
+
         return $this;
     }
 
@@ -59,7 +62,7 @@ class Request extends BaseRequestAttribute
     public function getBody(): CreateDeviceCommandCancelTaskReq
     {
         $this->body instanceof CreateDeviceCommandCancelTaskReq || $this->body = new CreateDeviceCommandCancelTaskReq();
+
         return $this->body;
     }
-
 }

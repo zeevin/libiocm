@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/6/29
  * Time: 上午11:51
@@ -10,11 +11,10 @@
 
 namespace Zeevin\Libiocm\BatchTask;
 
-
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
-class CreateClient  extends BaseClient implements ClientInterface
+class CreateClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
     protected $domain = 'batchtask';
@@ -29,6 +29,7 @@ class CreateClient  extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */

@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/18
  * Time: 下午2:35
@@ -23,7 +24,8 @@ trait DeviceCommandCancelTaskResp
     protected $taskId;
     /**
      * 应用唯一标识
-     * 可选
+     * 可选.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("appId")
      * @JMS\Type("string")
@@ -99,10 +101,7 @@ trait DeviceCommandCancelTaskResp
      * @return \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp
      */
     public function getDeviceCommands(
-    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp
-    {
+    ): \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Query\Struct\DeviceCommandResp {
         return $this->deviceCommands;
     }
-
-
 }

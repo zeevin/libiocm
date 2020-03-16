@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.saychain.net
+ *
  * @author Cao Kang(caokang@saychain.net)
  * Date: 2018/7/22
  * Time: 下午11:51
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\BatchQuery;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseResponseAttribute;
@@ -19,6 +19,7 @@ class Response extends BaseResponseAttribute
 {
     /**
      * 设备所属的 appId。
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("totalCount")
      * @JMS\Type("integer")
@@ -74,6 +75,4 @@ class Response extends BaseResponseAttribute
     {
         return $this->subscriptions;
     }
-
-
 }

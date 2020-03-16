@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/7/26
  * Time: 下午9:46
@@ -10,7 +11,6 @@
 
 namespace Zeevin\Libiocm\Dm\RequestAttribute\Devices\SpecificMemberAppend;
 
-
 use JMS\Serializer\Annotation as JMS;
 use JMS\Serializer\Annotation\SerializedName;
 use Zeevin\Libiocm\Core\BaseRequestAttribute;
@@ -18,7 +18,8 @@ use Zeevin\Libiocm\Core\BaseRequestAttribute;
 class Request extends BaseRequestAttribute
 {
     /**
-     * 设备组 ID
+     * 设备组 ID.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("devGroupId")
      * @JMS\Type("string")
@@ -26,7 +27,8 @@ class Request extends BaseRequestAttribute
     protected $devGroupId;
 
     /**
-     * 添加到设备组的设备 ID 列表
+     * 添加到设备组的设备 ID 列表.
+     *
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("deviceIds")
      * @JMS\Type("array<string>")
@@ -49,6 +51,7 @@ class Request extends BaseRequestAttribute
     public function setDevGroupId($devGroupId)
     {
         $this->devGroupId = $devGroupId;
+
         return $this;
     }
 
@@ -68,9 +71,7 @@ class Request extends BaseRequestAttribute
     public function setDeviceIds($deviceIds)
     {
         $this->deviceIds = $deviceIds;
+
         return $this;
     }
-
-
-
 }

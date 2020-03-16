@@ -1,6 +1,7 @@
 <?php
 /**
  * @link   https://www.init.lu
+ *
  * @author Cao Kang(caokang@outlook.com)
  * Date: 2018/5/10
  * Time: 下午4:16
@@ -10,13 +11,11 @@
 
 namespace Zeevin\Libiocm\Dm;
 
-
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 class DeleteDeviceClient extends BaseClient implements ClientInterface
 {
-
     protected $version = 'v1.4.0';
     protected $domain = 'dm';
     protected $prefix = 'devices';
@@ -30,6 +29,7 @@ class DeleteDeviceClient extends BaseClient implements ClientInterface
     {
         return $this->prefix;
     }
+
     /**
      * @return string
      */
