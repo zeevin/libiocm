@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Devgroup\ResponseAttribute\DevGroups\Create\Response;
 
 /**
- * Class CreateClient
- * @package Zeevin\Libiocm\Devgroup
+ * Class CreateClient.
+ *
  * @method Response  getResult($format = 'object')
  */
 class CreateClient extends BaseClient implements ClientInterface

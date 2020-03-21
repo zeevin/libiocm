@@ -10,8 +10,7 @@ $request = new \Zeevin\Libiocm\Cmd\RequestAttribute\DeviceCommandCancelTasks\Que
 
 $request->setDeviceId('2f41a999-3031-41bf-8aeb-a4d27eb9b547');
 
-
 //print_r($request->serialize());exit;
-/** @var  $ret */
+/** @var $ret */
 $ret = $app->cmdQueryTask->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);

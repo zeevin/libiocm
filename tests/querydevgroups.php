@@ -17,7 +17,5 @@ $cacheConfig = $app->config->get('cache');
 $request = new Zeevin\Libiocm\Devgroup\RequestAttribute\DevGroups\Query\Request();
 $request->setPageNo(0)->setPageSize(10);
 /** @var \Zeevin\Libiocm\Devgroup\QueryClient $app1 */
-
-
 $ret = $app->devGroupsQuery->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);

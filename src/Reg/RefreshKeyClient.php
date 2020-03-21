@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\RefreshKey\Response;
 
 /**
- * Class RefreshKeyClient
- * @package Zeevin\Libiocm\Reg
+ * Class RefreshKeyClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class RefreshKeyClient extends BaseClient implements ClientInterface

@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberQuery\Response;
 
 /**
- * Class SpecificMemberQueryClient
- * @package Zeevin\Libiocm\Dm
+ * Class SpecificMemberQueryClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class SpecificMemberQueryClient extends BaseClient implements ClientInterface

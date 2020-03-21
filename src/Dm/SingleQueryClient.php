@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Dm\RequestAttribute\Devices\SingleQuery\Request;
 
 /**
- * Class SingleQueryClient
- * @package Zeevin\Libiocm\Dm
+ * Class SingleQueryClient.
+ *
  * @method  Request getResult($format = 'object')
  */
 class SingleQueryClient extends BaseClient implements ClientInterface

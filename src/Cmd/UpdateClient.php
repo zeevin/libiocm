@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 /**
- * Class UpdateClient
- * @package Zeevin\Libiocm\Cmd
+ * Class UpdateClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class UpdateClient extends BaseClient implements ClientInterface

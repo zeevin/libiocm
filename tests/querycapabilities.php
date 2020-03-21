@@ -17,6 +17,5 @@ $cacheConfig = $app->config->get('cache');
 $request = new \Zeevin\Libiocm\Data\RequestAttribute\DeviceCapabilities\QueryCapabilities\Request();
 $request->setAppId($iotConfig['appId'])->setDeviceId('2f41a999-3031-41bf-8aeb-a4d27eb9b547');
 
-
 $ret = $app->dataQueryCapabilities->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);
