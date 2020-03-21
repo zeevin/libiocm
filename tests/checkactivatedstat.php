@@ -14,7 +14,6 @@ $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app->config->get('iot');
 $cacheConfig = $app->config->get('cache');
 
-
 $request = new \Zeevin\Libiocm\Reg\RequetAttribute\DeviceCredentials\CheckActivatedStat\Request();
 $request->setAppId($iotConfig['appId']);
 $device_id = '1c46924d-6e15-412e-8928-055acc452122';

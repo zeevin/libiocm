@@ -11,13 +11,13 @@
 
 namespace Zeevin\Libiocm\Reg;
 
-use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\CheckActivatedStat\Response;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\CheckActivatedStat\Response;
 
 /**
- * Class CheckActivatedStatClient
- * @package Zeevin\Libiocm\Reg
+ * Class CheckActivatedStatClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class CheckActivatedStatClient extends BaseClient implements ClientInterface

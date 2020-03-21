@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Devgroup\ResponseAttribute\DevGroups\Update\Response;
 
 /**
- * Class UpdateClient
- * @package Zeevin\Libiocm\Devgroup
+ * Class UpdateClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class UpdateClient extends BaseClient implements ClientInterface

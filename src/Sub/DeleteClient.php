@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\Delete\Response;
 
 /**
- * Class DeleteClient
- * @package Zeevin\Libiocm\Sub
+ * Class DeleteClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class DeleteClient extends BaseClient implements ClientInterface

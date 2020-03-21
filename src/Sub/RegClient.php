@@ -16,8 +16,8 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\Reg\Response;
 
 /**
- * Class RegClient
- * @package Zeevin\Libiocm\Sub
+ * Class RegClient.
+ *
  * @method Response getResult($format = 'object')
  */
 class RegClient extends BaseClient implements ClientInterface

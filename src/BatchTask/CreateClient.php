@@ -16,8 +16,7 @@ use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 /**
- * Class CreateClient
- * @package Zeevin\Libiocm\BatchTask
+ * Class CreateClient.
  *
  * @method Response getResult($format = 'object')
  */
