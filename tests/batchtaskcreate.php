@@ -11,8 +11,8 @@
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
-$iotConfig = $app['config']->get('iot');
-$cacheConfig = $app['config']->get('cache');
+$iotConfig = $app->config->get('iot');
+$cacheConfig = $app->config->get('cache');
 
 $request = new Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Create\Request();
 
@@ -25,9 +25,7 @@ $request->setAppId($iotConfig['appId'])->setTimeout(100)->setTaskName('name_'.ti
 $request->getParam()->setType('DeviceType')->setDeviceType('washer')
 ->getCommand()->setServiceId('aa')->setMethod('ww');
 
-/** @var \Zeevin\Libiocm\BatchTask\CreateClient $app1 */
-$app1 = $app['batchtask.create'];
 //print_r($request->serialize());exit;
 /** @var \Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Create\Response $ret */
-$ret = $app1->request($request->serialize())->getResult();
+$ret = $app->batchTaskCreate->request($request->serialize())->getResult();
 print_r($ret);

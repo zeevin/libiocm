@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Reg;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\Reg\Response;
 
+/**
+ * Class RegClient
+ * @package Zeevin\Libiocm\Reg
+ * @method Response getResult($format = 'object')
+ */
 class RegClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';

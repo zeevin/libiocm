@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Sec;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Sec\ResponseAttribute\RefreshToken\Response;
 
+/**
+ * Class RefreshTokenClient
+ * @package Zeevin\Libiocm\Sec
+ * @method Response getResult($format = 'object')
+ */
 class RefreshTokenClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';

@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Dm;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Dm\RequestAttribute\Devices\SingleQuery\Request;
 
+/**
+ * Class SingleQueryClient
+ * @package Zeevin\Libiocm\Dm
+ * @method  Request getResult($format = 'object')
+ */
 class SingleQueryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.4.0';

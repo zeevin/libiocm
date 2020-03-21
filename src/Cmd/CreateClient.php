@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Cmd;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Create\Response;
 
+/**
+ * Class CreateClient
+ * @package Zeevin\Libiocm\Cmd
+ * @method Response getResult($format = 'object')
+ */
 class CreateClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.4.0';

@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Sub;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\BatchQuery\Response;
 
+/**
+ * Class BatchQueryClient
+ * @package Zeevin\Libiocm\Sub
+ * @method  Response  getResult($format = 'object')
+ */
 class BatchQueryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';

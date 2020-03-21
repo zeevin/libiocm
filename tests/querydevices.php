@@ -11,14 +11,11 @@
 require './autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
-$iotConfig = $app['config']->get('iot');
-$cacheConfig = $app['config']->get('cache');
+$iotConfig = $app->config->get('iot');
+$cacheConfig = $app->config->get('cache');
 
 $request = new Zeevin\Libiocm\Dm\RequestAttribute\Devices\QueryDevices\Request();
 $request->setAppId($iotConfig['appId'])->setPageNo(1);
-/** @var \Zeevin\Libiocm\Dm\QueryDevicesClient $app_queryDevices] */
-$app_queryDevices = $app['dm.queryDevices'];
 //print_r($request->serialize('form-url-encode'));exit;
-/** @var \Zeevin\Libiocm\Dm\ResponseAttribute\Devices\QueryDevices\Response $ret */
-$ret = $app_queryDevices->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$ret = $app->dmQueryDevices->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);

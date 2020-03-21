@@ -40,7 +40,7 @@ abstract class BaseClient
     public function __construct(ServiceContainer $app)
     {
         $this->app = $app;
-        $this->config = $app['config']->get('iot');
+        $this->config = $app->config->get('iot');
     }
 
     public function getUri()
@@ -155,7 +155,7 @@ abstract class BaseClient
         $headers = ['User-Agent' => $this->client];
         if ($this->getPrefix() != 'login') {
             $app = $this->app;
-            $iotConfig = $app['config']->get('iot');
+            $iotConfig = $app->config->get('iot');
             $headers['Content-Type'] = 'application/json';
             $headers['app_key'] = $iotConfig['appId'];
             $headers['Authorization'] = 'Bearer '.$this->getAccessToken();
@@ -181,15 +181,15 @@ abstract class BaseClient
                 $iotConfig['secret']
             );
             /** @var \Zeevin\Libiocm\Sec\ResponseAttribute\Login\Response $ret */
-            $ret = $app['sec.login']->request(
+            $ret = $app->secLogin->request(
                 $request->serialize('form-url-encode')
             )->getResult();
-            $app['cache']->save(
+            $app->cache->save(
                 $cacheConfig['oauth_key'],
                 $ret,
                 $ret->getExpiresIn() - 600
             );
-            $app['cache']->save(
+            $app->cache->save(
                 $cacheConfig['oauth_refresh_key'],
                 $ret->getRefreshToken().':'.$ret->getAccessToken(),
                 86400 * 28
@@ -207,7 +207,7 @@ abstract class BaseClient
     protected function getAppId()
     {
         $app = $this->app;
-        $iotConfig = $app['config']->get('iot');
+        $iotConfig = $app->config->get('iot');
 
         return $iotConfig['appId'];
     }

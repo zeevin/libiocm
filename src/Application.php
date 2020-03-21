@@ -19,6 +19,7 @@ use Zeevin\Libiocm\Core\ServiceContainer;
  *
  * @property \Zeevin\Libiocm\Core\Config $config;
  * @property \Doctrine\Common\Cache\CacheProvider $cache;
+ * @property \GuzzleHttp\Client $http_client;
  * @property \Zeevin\Libiocm\Sec\LoginClient $secLogin;
  * @property \Zeevin\Libiocm\Sec\RefreshTokenClient $secRefreshToken;
  * @property \Zeevin\Libiocm\BatchTask\CreateClient $batchTaskCreate;

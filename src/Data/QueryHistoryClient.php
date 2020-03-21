@@ -13,7 +13,13 @@ namespace Zeevin\Libiocm\Data;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Response;
 
+/**
+ * Class QueryHistoryClient
+ * @package Zeevin\Libiocm\Data
+ * @method Response getResult($format = 'object')
+ */
 class QueryHistoryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';
