@@ -17,7 +17,8 @@ use Zeevin\Libiocm\Core\ServiceContainer;
 /**
  * Class Application.
  *
- * @property \DusanKasan\Knapsack\Collection $config;
+ * @property \Zeevin\Libiocm\Core\Config $config;
+ * @property \Doctrine\Common\Cache\CacheProvider $cache;
  * @property \Zeevin\Libiocm\Sec\LoginClient $secLogin;
  * @property \Zeevin\Libiocm\Sec\RefreshTokenClient $secRefreshToken;
  * @property \Zeevin\Libiocm\BatchTask\CreateClient $batchTaskCreate;
