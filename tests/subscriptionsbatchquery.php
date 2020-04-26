@@ -17,6 +17,5 @@ $cacheConfig = $app['config']->get('cache');
 $request = new Zeevin\Libiocm\Sub\RequestAttribute\Subscriptions\BatchQuery\Request();
 $request->setAppId($iotConfig['appId']);
 
-
 $ret = $app->subQueryBatch->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);

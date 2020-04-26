@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sec\ResponseAttribute\RefreshToken\Response;
 
 /**
- * Class RefreshTokenClient
- * @method Response getResult($format = 'object')
+ * Class RefreshTokenClient.
  *
- * @package Zeevin\Libiocm\Sec
+ * @method Response getResult($format = 'object')
  */
 class RefreshTokenClient extends BaseClient implements ClientInterface
 {

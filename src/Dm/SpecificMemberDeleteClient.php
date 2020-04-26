@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberDelete\Response;
 
 /**
- * Class SpecificMemberDeleteClient
- * @method Response getResult($format = 'object')
+ * Class SpecificMemberDeleteClient.
  *
- * @package Zeevin\Libiocm\Dm
+ * @method Response getResult($format = 'object')
  */
 class SpecificMemberDeleteClient extends BaseClient implements ClientInterface
 {

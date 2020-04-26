@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Devgroup\ResponseAttribute\DevGroups\Query\Response;
 
 /**
- * Class QueryClient
- * @method Response getResult($format = 'object')
+ * Class QueryClient.
  *
- * @package Zeevin\Libiocm\Devgroup
+ * @method Response getResult($format = 'object')
  */
 class QueryClient extends BaseClient implements ClientInterface
 {

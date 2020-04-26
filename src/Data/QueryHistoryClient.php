@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Data\ResponseAttribute\DeviceDataHistory\QueryHistory\Response;
 
 /**
- * Class QueryHistoryClient
- * @method Response getResult($format = 'object')
+ * Class QueryHistoryClient.
  *
- * @package Zeevin\Libiocm\Data
+ * @method Response getResult($format = 'object')
  */
 class QueryHistoryClient extends BaseClient implements ClientInterface
 {

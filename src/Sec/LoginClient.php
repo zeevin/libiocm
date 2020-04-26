@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sec\ResponseAttribute\Login\Response;
 
 /**
- * Class LoginClient
- * @method Response getResult($format = 'object')
+ * Class LoginClient.
  *
- * @package Zeevin\Libiocm\Sec
+ * @method Response getResult($format = 'object')
  */
 class LoginClient extends BaseClient implements ClientInterface
 {

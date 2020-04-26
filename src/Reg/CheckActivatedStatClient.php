@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\CheckActivatedStat\Response;
 
 /**
- * Class CheckActivatedStatClient
- * @method Response getResult($format = 'object')
+ * Class CheckActivatedStatClient.
  *
- * @package Zeevin\Libiocm\Reg
+ * @method Response getResult($format = 'object')
  */
 class CheckActivatedStatClient extends BaseClient implements ClientInterface
 {
