@@ -11,9 +11,16 @@
 
 namespace Zeevin\Libiocm\Cmd;
 
+use Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommandCancelTasks\QueryTask\Response;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
+/**
+ * Class QueryTaskClient
+ * @method Response  getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Cmd
+ */
 class QueryTaskClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.4.0';
