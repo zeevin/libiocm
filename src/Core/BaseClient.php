@@ -61,7 +61,6 @@ abstract class BaseClient
     public function request(string $body = '')
     {
         $method = strtoupper($this->getMethod());
-
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -183,7 +182,6 @@ abstract class BaseClient
             $app['cache']->save($cacheConfig['oauth_refresh_key'], $ret->getRefreshToken().':'.$ret->getAccessToken(),
                 86400 * 28);
         }
-
         return $ret->getAccessToken();
     }
 
