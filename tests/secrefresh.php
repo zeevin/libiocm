@@ -8,20 +8,25 @@
  * Source: secrefresh.php
  * Project: libiocm
  */
-require './autoload.php';
+require '../vendor/autoload.php';
 $config = require './config.php';
+use Zeevin\Libiocm\Sec\RequestAttribute as NbRequest;
+
 $app = new Zeevin\Libiocm\Application($config);
+
 $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
 $refreshToken = $app['cache']->fetch($cacheConfig['oauth_refresh_key']);
 $tmp = explode(':', $refreshToken);
-$request = new \Zeevin\Libiocm\Sec\RequestAttribute\RefreshToken\Request();
-$request->setAppId($iotConfig['appId'])->setSecret($iotConfig['secret'])
+$request = new NbRequest\RefreshToken\Request();
+
+$request->setAppId($iotConfig['appId'])
+    ->setSecret($iotConfig['secret'])
     ->setRefreshToken($tmp[0]);
 
 //print_r($request->serialize());exit;
-$ret = $app['sec.refreshToken']->request($request->serialize())->getResult();
+$ret = $app->secRefreshToken->request($request)->getResult();
 
 $app['cache']->save($cacheConfig['oauth_key'], $ret, $ret->getExpiresIn() - 600);
 $app['cache']->save($cacheConfig['oauth_refresh_key'], $ret->getRefreshToken().':'.$ret->getAccessToken(), 86400 * 28);
