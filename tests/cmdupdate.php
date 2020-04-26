@@ -1,6 +1,6 @@
 <?php
 
-require './autoload.php';
+require '../vendor/autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');

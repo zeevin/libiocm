@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Dm;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberAppend\Response;
 
+/**
+ * Class SpecificMemberAppendClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Dm
+ */
 class SpecificMemberAppendClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
