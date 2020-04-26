@@ -7,19 +7,16 @@
  * Time: 上午11:57
  * Project: libiocm
  */
-require './autoload.php';
+require '../vendor/autoload.php';
 $config = require './config.php';
 $app = new Zeevin\Libiocm\Application($config);
 $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
 $request = new Zeevin\Libiocm\Sub\RequestAttribute\Subscribe\Create\Request();
-$request->setNotifyType('swUpgradeStateChangeNotify')->setCallbackUrl('https://iot.init.lu:443/callback.php');
-/** @var Zeevin\Libiocm\Sub\RequestAttribute\Subscribe\Create\Request $app */
-$app = $app['sub.create'];
-//print_r($request->serialize());exit;
-/** @var \Zeevin\Libiocm\Dm\RequestAttribute\Devices\SingleQuery\Request $ret */
-$ret = $app->request($request->serialize())->getResult();
-print_r($ret);
+$request->setNotifyType('swUpgradeStateChangeNotify')
+    ->setCallbackUrl('https://iot.init.lu:443/callback.php');
 
-//通知数据示例：{"notifyType":"deviceDeleted","deviceId":"ca3bbf17-b9e7-46b4-82bb-7025507c9bb2","gatewayId":"ca3bbf17-b9e7-46b4-82bb-7025507c9bb2"}
+//print_r($request->serialize());exit;
+$ret = $app->subCreate->request($request)->getResult();
+print_r($ret);
