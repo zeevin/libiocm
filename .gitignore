@@ -5,3 +5,4 @@ tests/config.php
 tests/cache
 tests/logs
 composer.lock
+.php_cs.cache

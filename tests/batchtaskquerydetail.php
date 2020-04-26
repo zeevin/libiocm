@@ -15,9 +15,7 @@ $iotConfig = $app['config']->get('iot');
 $cacheConfig = $app['config']->get('cache');
 
 $request = new Zeevin\Libiocm\BatchTask\RequestAttribute\TaskDetails\Query\Request();
-
-$taskId = '5b5444dd1cfb5e35fc9a7ef8';
-
+$taskId = '5e75b0b2c527c80f7cbc26c2';
 $request->setAppId($iotConfig['appId'])->setTaskId($taskId);
 
 $ret = $app->batchTaskQueryDetail->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
