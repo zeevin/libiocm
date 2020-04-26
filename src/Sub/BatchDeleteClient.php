@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Sub;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\BatchDelete\Response;
 
+/**
+ * Class BatchDeleteClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Sub
+ */
 class BatchDeleteClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';
