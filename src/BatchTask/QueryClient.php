@@ -11,9 +11,16 @@
 
 namespace Zeevin\Libiocm\BatchTask;
 
+use Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Query\Response;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
+/**
+ * Class QueryClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\BatchTask
+ */
 class QueryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';

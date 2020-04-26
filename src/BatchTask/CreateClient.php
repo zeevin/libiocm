@@ -11,9 +11,16 @@
 
 namespace Zeevin\Libiocm\BatchTask;
 
+use Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Create\Response;
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
+/**
+ * Class CreateClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\BatchTask
+ */
 class CreateClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';

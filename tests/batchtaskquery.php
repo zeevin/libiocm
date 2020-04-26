@@ -18,10 +18,11 @@ $request = new Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Query\Request();
 
 $request->setAppId($iotConfig['appId'])->setSelect('tag');
 
-$taskId = '5b5444dd1cfb5e35fc9a7ef8';
-/** @var \Zeevin\Libiocm\BatchTask\QueryClient $app1 */
-$app1 = $app['batchtask.query'];
-/** @var \Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Query\Response $ret */
-$ret = $app1->setUrlExtend($taskId)->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$taskId = '5ea5485eed89c215bb9fff04';
+
+$ret = $app->batchTaskQuery->setUrlExtend($taskId)
+    ->setUrlParams($request->serialize('form-url-encode'))
+    ->request()
+    ->getResult();
 
 print_r($ret);

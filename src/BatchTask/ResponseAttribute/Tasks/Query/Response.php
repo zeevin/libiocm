@@ -148,7 +148,7 @@ class Response extends BaseResponseAttribute
     /**
      * @JMS\XmlElement(cdata=false)
      * @SerializedName("param")
-     * @JMS\Type("array<string,string>")
+     * @JMS\Type("array")
      */
     protected $param;
     /**

@@ -20,14 +20,13 @@ $request = new Zeevin\Libiocm\BatchTask\RequestAttribute\Tasks\Create\Request();
 //    ->setTaskType('DeviceReg');
 //$param  = $request->getParam()->setFileId('9912122');
 
-$request->setAppId($iotConfig['appId'])->setTimeout(100)->setTaskName('name_'.time())
+$request->setAppId($iotConfig['appId'])
+    ->setTimeout(100)
+    ->setTaskName('name_'.time())
     ->setTaskType('DeviceCmd');
+
 $request->getParam()->setType('DeviceType')->setDeviceType('washer')
 ->getCommand()->setServiceId('aa')->setMethod('ww');
 
-/** @var \Zeevin\Libiocm\BatchTask\CreateClient $app1 */
-$app1 = $app['batchtask.create'];
-//print_r($request->serialize());exit;
-/** @var \Zeevin\Libiocm\BatchTask\ResponseAttribute\Tasks\Create\Response $ret */
-$ret = $app1->request($request->serialize())->getResult();
+$ret = $app->batchTaskCreate->request($request)->getResult();
 print_r($ret);
