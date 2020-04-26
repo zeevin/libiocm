@@ -19,7 +19,6 @@ $device_id = '12b3f9b0-39a9-411b-b2e0-d4ffdace3e09';
 $request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('upstream')
     ->setMethod('command')->setParas(['commandLen'=>8, 'commandData'=>'qgMCBAALy1U=']);
 
-
 //此接口有几个异常的代码的请求状态码是404和500，需要单独try catch此类异常，按说只要不是对方服务器执行出问题，都应该用200的状态码返回数据
 try {
     $ret = $app->cmdCreate->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request)->getResult();

@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\BaseResponseAttribute;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 /**
- * Class UpdateDeviceClient
- * @method BaseResponseAttribute getResult($format = 'object')
+ * Class UpdateDeviceClient.
  *
- * @package Zeevin\Libiocm\Dm
+ * @method BaseResponseAttribute getResult($format = 'object')
  */
 class UpdateDeviceClient extends BaseClient implements ClientInterface
 {

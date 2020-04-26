@@ -54,13 +54,14 @@ abstract class BaseClient
     }
 
     /**
-     * @param  string  $body
+     * @param string $body
      *
      * @return $this
      */
     public function request(string $body = '')
     {
         $method = strtoupper($this->getMethod());
+
         try {
             $this->response = $this->getHttpClient()->request(
                 $method,
@@ -80,7 +81,7 @@ abstract class BaseClient
                 'statusCode'   => $e->getCode(),
                 'reasonPhrase' => $e->getResponse()->getReasonPhrase(),
             ];
-            $message = (array)json_decode(
+            $message = (array) json_decode(
                 $e->getResponse()->getBody()->getContents()
             );
             $this->httpErrors = array_merge($this->httpErrors, $message);
@@ -95,7 +96,7 @@ abstract class BaseClient
     }
 
     /**
-     * @param  string  $format
+     * @param string $format
      *
      * @return array|\JMS\Serializer\scalar|mixed|null|object|string|string[]
      */
@@ -103,7 +104,7 @@ abstract class BaseClient
     {
         if (empty($this->httpErrors)) {
             $body_array = json_decode(
-                (string)$this->response->getBody(),
+                (string) $this->response->getBody(),
                 true
             );
 
@@ -179,9 +180,13 @@ abstract class BaseClient
             $request->setAppId($iotConfig['appId'])->setSecret($iotConfig['secret']);
             $ret = $app->secLogin->request($request->serialize('form-url-encode'))->getResult();
             $app['cache']->save($cacheConfig['oauth_key'], $ret, $ret->getExpiresIn() - 600);
-            $app['cache']->save($cacheConfig['oauth_refresh_key'], $ret->getRefreshToken().':'.$ret->getAccessToken(),
-                86400 * 28);
+            $app['cache']->save(
+                $cacheConfig['oauth_refresh_key'],
+                $ret->getRefreshToken().':'.$ret->getAccessToken(),
+                86400 * 28
+            );
         }
+
         return $ret->getAccessToken();
     }
 
@@ -210,7 +215,7 @@ abstract class BaseClient
     }
 
     /**
-     * @param  mixed  ...$params
+     * @param mixed ...$params
      *
      * @return $this
      */

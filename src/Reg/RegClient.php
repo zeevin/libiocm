@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\Reg\Response;
 
 /**
- * Class RegClient
- * @method Response getResult($format = 'object')
+ * Class RegClient.
  *
- * @package Zeevin\Libiocm\Reg
+ * @method Response getResult($format = 'object')
  */
 class RegClient extends BaseClient implements ClientInterface
 {

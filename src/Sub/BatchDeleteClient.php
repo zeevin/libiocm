@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\BatchDelete\Response;
 
 /**
- * Class BatchDeleteClient
- * @method Response getResult($format = 'object')
+ * Class BatchDeleteClient.
  *
- * @package Zeevin\Libiocm\Sub
+ * @method Response getResult($format = 'object')
  */
 class BatchDeleteClient extends BaseClient implements ClientInterface
 {

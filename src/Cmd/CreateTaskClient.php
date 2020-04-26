@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
 /**
- * Class CreateTaskClient
- * @method Response getResult($format = 'object')
+ * Class CreateTaskClient.
  *
- * @package Zeevin\Libiocm\Cmd
+ * @method Response getResult($format = 'object')
  */
 class CreateTaskClient extends BaseClient implements ClientInterface
 {

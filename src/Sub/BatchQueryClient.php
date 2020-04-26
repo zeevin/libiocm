@@ -16,10 +16,9 @@ use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 use Zeevin\Libiocm\Sub\ResponseAttribute\Subscriptions\BatchQuery\Response;
 
 /**
- * Class BatchQueryClient
- * @method Response getResult($format = 'object')
+ * Class BatchQueryClient.
  *
- * @package Zeevin\Libiocm\Sub
+ * @method Response getResult($format = 'object')
  */
 class BatchQueryClient extends BaseClient implements ClientInterface
 {
