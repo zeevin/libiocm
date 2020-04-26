@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Sec;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Sec\ResponseAttribute\Login\Response;
 
+/**
+ * Class LoginClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Sec
+ */
 class LoginClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
@@ -21,7 +28,10 @@ class LoginClient extends BaseClient implements ClientInterface
     protected $prefix = 'login';
     protected $method = 'POST';
 
-    public function getPrefix()
+    /**
+     * @return string
+     */
+    public function getPrefix(): string
     {
         return $this->prefix;
     }

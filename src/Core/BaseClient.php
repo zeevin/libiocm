@@ -58,7 +58,7 @@ abstract class BaseClient
      *
      * @return $this
      */
-    public function request($body = '')
+    public function request(string $body = '')
     {
         $method = strtoupper($this->getMethod());
 
