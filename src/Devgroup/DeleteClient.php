@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Devgroup;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Devgroup\ResponseAttribute\DevGroups\Delete\Response;
 
+/**
+ * Class DeleteClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Devgroup
+ */
 class DeleteClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.3.0';
