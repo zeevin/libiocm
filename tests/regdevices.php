@@ -19,5 +19,5 @@ $random = 'TEST_'.bin2hex(random_bytes(6));
 //var_dump($random);
 $request->setNodeId($random)->setTimeout(0)->setVerifyCode($random);
 
-$ret = $app['reg.reg']->request($request->serialize())->getResult();
+$ret = $app->regReg->request($request->serialize())->getResult();
 print_r($ret);

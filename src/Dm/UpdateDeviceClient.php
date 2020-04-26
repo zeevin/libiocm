@@ -12,8 +12,15 @@
 namespace Zeevin\Libiocm\Dm;
 
 use Zeevin\Libiocm\Core\BaseClient;
+use Zeevin\Libiocm\Core\BaseResponseAttribute;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
 
+/**
+ * Class UpdateDeviceClient
+ * @method BaseResponseAttribute getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Dm
+ */
 class UpdateDeviceClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.4.0';

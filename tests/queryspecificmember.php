@@ -16,9 +16,8 @@ $cacheConfig = $app['config']->get('cache');
 
 $request = new Zeevin\Libiocm\Dm\RequestAttribute\Devices\SpecificMemberQuery\Request();
 $request->setPageNo(0)->setPageSize(10)->setDevGroupId('c10ff557-f236-4daa-adb6-3e46a2fbc288');
-/** @var \Zeevin\Libiocm\Dm\SpecificMemberQueryClient $app1 */
-$app1 = $app['dm.query.devgroup.specific.member'];
+
+
 //print_r($request->serialize('form-url-encode'));exit;
-/** @var Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberQuery\Response $ret */
-$ret = $app1->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
+$ret = $app->dmQueryDevgroupSpecificMember->setUrlParams($request->serialize('form-url-encode'))->request()->getResult();
 print_r($ret);

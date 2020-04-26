@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Dm;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Dm\ResponseAttribute\Devices\SpecificMemberQuery\Response;
 
+/**
+ * Class SpecificMemberQueryClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Dm
+ */
 class SpecificMemberQueryClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.2.0';

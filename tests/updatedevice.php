@@ -19,9 +19,8 @@ $request = new \Zeevin\Libiocm\Dm\RequestAttribute\Devices\UpdateDevice\Request(
 $name = 'NAME1_'.time();
 $request->setName($name);
 $request->getDeviceConfig()->getDataConfig()->setDataAgingTime(90);
-/** @var \Zeevin\Libiocm\Dm\UpdateDeviceClient $app_update */
-$app_update = $app['dm.updateDevice'];
-$device_id = '2f41a999-3031-41bf-8aeb-a4d27eb9b547';
-//print_r($request->serialize());
-$ret = $app_update->setUrlExtend($device_id)->request($request->serialize())->getResult('json');
+
+$device_id = '5ee94ea9-68eb-43a1-8a70-c45a7a2161c9';
+
+$ret = $app->dmUpdateDevice->setUrlExtend($device_id)->request($request)->getResult();
 print_r($ret);

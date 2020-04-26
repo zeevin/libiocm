@@ -13,7 +13,14 @@ namespace Zeevin\Libiocm\Reg;
 
 use Zeevin\Libiocm\Core\BaseClient;
 use Zeevin\Libiocm\Core\Contracts\ClientInterface;
+use Zeevin\Libiocm\Reg\ResponseAttribute\DeviceCredentials\RefreshKey\Response;
 
+/**
+ * Class RefreshKeyClient
+ * @method Response getResult($format = 'object')
+ *
+ * @package Zeevin\Libiocm\Reg
+ */
 class RefreshKeyClient extends BaseClient implements ClientInterface
 {
     protected $version = 'v1.1.0';
