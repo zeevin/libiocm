@@ -19,7 +19,7 @@
         "jms/serializer": "^1.11",
         "doctrine/cache": "^1.7",
         "pimple/pimple": "^3.2",
-        "symfony/http-foundation": "~3,3||~4.0",
+        "symfony/http-foundation": "~3,3||~4.0||~5.0",
         "predis/predis": "^1.1",
         "openlss/lib-array2xml": "^0.5.1"
     },
