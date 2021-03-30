@@ -50,6 +50,7 @@ class LoginClient extends BaseClient implements ClientInterface
     {
         return $this->domain;
     }
+
     /**
      * @return string
      */
