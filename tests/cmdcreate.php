@@ -21,8 +21,8 @@ $request->getBody()->setDeviceId($device_id)->getCommand()->setServiceId('upstre
 
 //此接口有几个异常的代码的请求状态码是404和500，需要单独try catch此类异常，按说只要不是对方服务器执行出问题，都应该用200的状态码返回数据
 try {
+    /** @var \Zeevin\Libiocm\Cmd\ResponseAttribute\DeviceCommands\Create\Response $ret */
     $ret = $app->cmdCreate->setUrlParams(http_build_query(['appid'=>$iotConfig['appId']]))->request($request)->getResult();
-    print_r($ret);
 } catch (Exception $e) {
     echo json_encode(['errorcode'=>$e->getCode(), 'errormessage'=>$e->getMessage()]);
 }
